@@ -5,17 +5,16 @@ import com.example.jobtracker.dto.ApplicationDto;
 import com.example.jobtracker.service.ApplicationService;
 import com.example.jobtracker.service.UserService;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Assumptions;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ActiveProfiles;
 
-import java.io.File;
 import java.time.LocalDate;
 import java.util.Map;
 
 @SpringBootTest
+@ActiveProfiles("test")
 public class ApplicationIntegrationTest {
 
     @Autowired
@@ -23,12 +22,6 @@ public class ApplicationIntegrationTest {
 
     @Autowired
     private ApplicationService applicationService;
-
-    @BeforeAll
-    static void assumeDockerAvailable() {
-        // Testcontainers require Docker. Skip tests if not available.
-        Assumptions.assumeTrue(new File("/var/run/docker.sock").exists(), "Docker is required for integration tests");
-    }
 
     @Test
     void createAndListApplications() {
@@ -45,18 +38,18 @@ public class ApplicationIntegrationTest {
         var appRequest = new CreateApplicationRequest();
         appRequest.setCompany("Acme Corp");
         appRequest.setRole("Engineer");
-        appRequest.setStatus("Applied");
         appRequest.setAppliedAt(LocalDate.now());
         var created = applicationService.createForUser(user.getUsername(), appRequest);
 
         Assertions.assertNotNull(created.getId());
         Assertions.assertEquals("Acme Corp", created.getCompany());
+        Assertions.assertNotNull(created.getStage());
 
         var list = applicationService.listForUser(user.getUsername());
         Assertions.assertFalse(list.isEmpty());
         Assertions.assertEquals(1, list.size());
 
         Map<String, Long> counts = applicationService.statusCounts(user.getUsername());
-        Assertions.assertEquals(1L, counts.get("Applied"));
+        Assertions.assertEquals(1L, counts.getOrDefault("Applied", 0L));
     }
 }
