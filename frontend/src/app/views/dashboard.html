@@ -1,0 +1,104 @@
+<section class="page-enter">
+  <div class="section-head mb-4">
+    <div>
+      <p class="section-kicker">Overview</p>
+      <h1 class="section-title">Dashboard</h1>
+      <p class="section-subtitle">
+        Understand response rate, interview conversion, reminders, and monthly trends at a glance.
+      </p>
+    </div>
+
+    <div class="d-flex flex-wrap gap-2">
+      <a class="btn btn-soft" href="#/applications">Open applications</a>
+      <a class="btn btn-primary" href="#/applications/new">Add application</a>
+    </div>
+  </div>
+
+  <div ng-if="vm.loading" class="surface-card loading-shell">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading</span>
+    </div>
+  </div>
+
+  <div ng-if="!vm.loading">
+    <div class="stat-grid mb-4" ng-if="vm.summary">
+      <div class="stat-chip"><span class="label">Total</span><span class="value">{{vm.summary.totalApplications}}</span></div>
+      <div class="stat-chip"><span class="label">Response Rate</span><span class="value">{{(vm.summary.responseRate * 100) | number:0}}%</span></div>
+      <div class="stat-chip"><span class="label">Interview Conversion</span><span class="value">{{(vm.summary.interviewConversionRate * 100) | number:0}}%</span></div>
+      <div class="stat-chip"><span class="label">Offers</span><span class="value">{{vm.summary.offerCount}}</span></div>
+      <div class="stat-chip"><span class="label">Rejections</span><span class="value">{{vm.summary.rejectionCount}}</span></div>
+      <div class="stat-chip"><span class="label">Upcoming Reminders</span><span class="value">{{vm.summary.upcomingReminders}}</span></div>
+      <div class="stat-chip"><span class="label">Overdue Reminders</span><span class="value">{{vm.summary.overdueReminders}}</span></div>
+    </div>
+
+    <div class="row g-4 mb-4">
+      <div class="col-lg-7">
+        <div class="surface-card h-100">
+          <h5 class="mb-3">Applications by Month</h5>
+          <div ng-repeat="point in vm.trends.monthly" class="trend-row mb-2">
+            <div class="d-flex justify-content-between small-muted mb-1">
+              <span>{{point.month}}</span>
+              <span>{{point.applications}} apps · {{point.rejections}} rejections</span>
+            </div>
+            <div class="trend-bar-wrap">
+              <div class="trend-bar" ng-style="{'width': ((point.applications / vm.maxMonthlyApplications()) * 100) + '%'}"></div>
+            </div>
+          </div>
+          <div class="empty-state py-3" ng-if="!vm.trends.monthly || vm.trends.monthly.length === 0">
+            <p class="mb-0">No trend data yet.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5">
+        <div class="surface-card h-100">
+          <h5 class="mb-3">Rejections by Stage</h5>
+          <div ng-repeat="point in vm.trends.rejectionsByStage" class="trend-row mb-2">
+            <div class="d-flex justify-content-between small-muted mb-1">
+              <span>{{point.stageName}}</span>
+              <span>{{point.count}}</span>
+            </div>
+            <div class="trend-bar-wrap danger">
+              <div class="trend-bar" ng-style="{'width': ((point.count / vm.maxRejectionsByStage()) * 100) + '%'}"></div>
+            </div>
+          </div>
+          <div class="empty-state py-3" ng-if="!vm.trends.rejectionsByStage || vm.trends.rejectionsByStage.length === 0">
+            <p class="mb-0">No rejection trend data.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="surface-card h-100">
+          <h5 class="mb-3">Upcoming Reminders</h5>
+          <div class="list-group list-group-flush" ng-if="vm.upcoming.length">
+            <div class="list-group-item px-0" ng-repeat="reminder in vm.upcoming | limitTo:8">
+              <div class="fw-semibold">{{reminder.title}}</div>
+              <div class="small-muted">Due {{reminder.dueAt | date:'MMM d, y h:mm a'}}</div>
+            </div>
+          </div>
+          <div class="empty-state py-3" ng-if="!vm.upcoming.length">
+            <p class="mb-0">No upcoming reminders.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="surface-card h-100">
+          <h5 class="mb-3">Overdue Reminders</h5>
+          <div class="list-group list-group-flush" ng-if="vm.overdue.length">
+            <div class="list-group-item px-0" ng-repeat="reminder in vm.overdue | limitTo:8">
+              <div class="fw-semibold">{{reminder.title}}</div>
+              <div class="small-muted">Due {{reminder.dueAt | date:'MMM d, y h:mm a'}}</div>
+            </div>
+          </div>
+          <div class="empty-state py-3" ng-if="!vm.overdue.length">
+            <p class="mb-0">No overdue reminders.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -36,6 +36,11 @@
         controller: 'ApplicationFormController',
         controllerAs: 'vm',
       })
+      .when('/applications/:id', {
+        templateUrl: 'app/views/application-detail.html',
+        controller: 'ApplicationDetailController',
+        controllerAs: 'vm',
+      })
       .when('/applications/:id/edit', {
         templateUrl: 'app/views/application-form.html',
         controller: 'ApplicationFormController',
@@ -49,6 +54,11 @@
       .when('/activity', {
         templateUrl: 'app/views/activity.html',
         controller: 'ActivityController',
+        controllerAs: 'vm',
+      })
+      .when('/dashboard', {
+        templateUrl: 'app/views/dashboard.html',
+        controller: 'DashboardController',
         controllerAs: 'vm',
       })
       .when('/admin/users', {

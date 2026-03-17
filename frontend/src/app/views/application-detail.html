@@ -1,0 +1,321 @@
+<section class="page-enter">
+  <div class="section-head mb-4">
+    <div>
+      <p class="section-kicker">Application Workspace</p>
+      <h1 class="section-title">{{vm.application.company}} · {{vm.application.role}}</h1>
+      <p class="section-subtitle">
+        Manage interviews, reminders, documents, networking, notes, and offers for this application in one place.
+      </p>
+    </div>
+
+    <div class="d-flex flex-wrap gap-2">
+      <button class="btn btn-soft" type="button" ng-click="vm.back()">Back</button>
+      <a class="btn btn-primary" href="#/applications/{{vm.applicationId}}/edit">Edit Application</a>
+    </div>
+  </div>
+
+  <div ng-if="vm.loading" class="surface-card loading-shell">
+    <div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading</span></div>
+  </div>
+
+  <div ng-if="!vm.loading && vm.application">
+    <div class="surface-card mb-4">
+      <div class="row g-3 align-items-end">
+        <div class="col-lg-4">
+          <div class="small-muted mb-1">Current Stage</div>
+          <span class="status-pill status-default">{{vm.application.stage.name}}</span>
+          <div class="small-muted mt-1">{{vm.application.daysInCurrentStage}} days in stage</div>
+        </div>
+        <div class="col-lg-2">
+          <div class="small-muted mb-1">Priority</div>
+          <span class="priority-pill">{{vm.application.priority}}</span>
+        </div>
+        <div class="col-lg-3">
+          <label class="form-label">Move to stage</label>
+          <select class="form-select" ng-model="vm.stageMove.toStageId">
+            <option ng-repeat="stage in vm.stages" value="{{stage.id}}">{{stage.name}}</option>
+          </select>
+        </div>
+        <div class="col-lg-3">
+          <label class="form-label">Reason (optional)</label>
+          <input class="form-control app-input" ng-model="vm.stageMove.reason" placeholder="Why changed stage" />
+        </div>
+        <div class="col-12 d-flex justify-content-end">
+          <button class="btn btn-primary" type="button" ng-click="vm.moveStage()">Update Stage</button>
+        </div>
+      </div>
+
+      <hr class="my-4" />
+
+      <h5 class="mb-2">Stage History</h5>
+      <div class="table-responsive" ng-if="vm.stageHistory.length">
+        <table class="table app-table align-middle">
+          <thead>
+            <tr>
+              <th>Changed At</th>
+              <th>From</th>
+              <th>To</th>
+              <th>Reason</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="event in vm.stageHistory">
+              <td>{{event.changedAt | date:'MMM d, y h:mm a'}}</td>
+              <td>{{event.fromStageName || '-'}}</td>
+              <td>{{event.toStageName}}</td>
+              <td>{{event.reason || '-'}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="empty-state py-3" ng-if="!vm.stageHistory.length">
+        <p class="mb-0">No stage changes yet.</p>
+      </div>
+    </div>
+
+    <div class="detail-tabs mb-3">
+      <button type="button" class="detail-tab" ng-class="{'active': vm.tab === 'interviews'}" ng-click="vm.setTab('interviews')">Interviews</button>
+      <button type="button" class="detail-tab" ng-class="{'active': vm.tab === 'reminders'}" ng-click="vm.setTab('reminders')">Reminders</button>
+      <button type="button" class="detail-tab" ng-class="{'active': vm.tab === 'documents'}" ng-click="vm.setTab('documents')">Documents</button>
+      <button type="button" class="detail-tab" ng-class="{'active': vm.tab === 'notes'}" ng-click="vm.setTab('notes')">Notes</button>
+      <button type="button" class="detail-tab" ng-class="{'active': vm.tab === 'contacts'}" ng-click="vm.setTab('contacts')">Networking</button>
+      <button type="button" class="detail-tab" ng-class="{'active': vm.tab === 'offers'}" ng-click="vm.setTab('offers')">Offers</button>
+    </div>
+
+    <div class="surface-card" ng-show="vm.tab === 'interviews'">
+      <h5 class="mb-3">Interview Rounds</h5>
+      <form class="row g-3 mb-4" ng-submit="vm.saveInterview()">
+        <div class="col-md-4">
+          <label class="form-label">Round Name</label>
+          <input class="form-control app-input" ng-model="vm.interviewForm.roundName" required />
+        </div>
+        <div class="col-md-3">
+          <label class="form-label">Type</label>
+          <select class="form-select" ng-model="vm.interviewForm.roundType" required>
+            <option value="PHONE_SCREEN">Phone Screen</option>
+            <option value="RECRUITER">Recruiter</option>
+            <option value="TECHNICAL">Technical</option>
+            <option value="MANAGER">Manager</option>
+            <option value="ONSITE">Onsite</option>
+            <option value="OA">OA</option>
+            <option value="HR">HR</option>
+            <option value="OTHER">Other</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label class="form-label">Date & Time</label>
+          <input type="datetime-local" class="form-control app-input" ng-model="vm.interviewForm.scheduledAt" required />
+        </div>
+        <div class="col-md-2">
+          <label class="form-label">Result</label>
+          <select class="form-select" ng-model="vm.interviewForm.resultStatus" required>
+            <option value="SCHEDULED">Scheduled</option>
+            <option value="COMPLETED">Completed</option>
+            <option value="PASSED">Passed</option>
+            <option value="FAILED">Failed</option>
+            <option value="CANCELLED">Cancelled</option>
+            <option value="NO_SHOW">No Show</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Interviewer</label>
+          <input class="form-control app-input" ng-model="vm.interviewForm.interviewerName" />
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Notes</label>
+          <input class="form-control app-input" ng-model="vm.interviewForm.notes" />
+        </div>
+        <div class="col-12">
+          <label class="form-label">Feedback</label>
+          <textarea class="form-control" ng-model="vm.interviewForm.feedback" rows="2"></textarea>
+        </div>
+        <div class="col-12 d-flex justify-content-end">
+          <button class="btn btn-primary" type="submit">Save Interview</button>
+        </div>
+      </form>
+
+      <div class="table-responsive" ng-if="vm.interviews.length">
+        <table class="table app-table align-middle">
+          <thead><tr><th>Round</th><th>Type</th><th>Scheduled</th><th>Result</th><th class="text-end">Actions</th></tr></thead>
+          <tbody>
+            <tr ng-repeat="item in vm.interviews">
+              <td>{{item.roundName}}</td>
+              <td>{{item.roundType}}</td>
+              <td>{{item.scheduledAt | date:'MMM d, y h:mm a'}}</td>
+              <td>{{item.resultStatus}}</td>
+              <td class="text-end">
+                <button class="btn btn-sm btn-soft me-2" ng-click="vm.editInterview(item)">Edit</button>
+                <button class="btn btn-sm btn-danger-soft" ng-click="vm.deleteInterview(item)">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="empty-state py-3" ng-if="!vm.interviews.length"><p class="mb-0">No interview rounds yet.</p></div>
+    </div>
+
+    <div class="surface-card" ng-show="vm.tab === 'reminders'">
+      <h5 class="mb-3">Follow-up and Deadline Reminders</h5>
+      <form class="row g-3 mb-4" ng-submit="vm.saveReminder()">
+        <div class="col-md-4"><label class="form-label">Title</label><input class="form-control app-input" ng-model="vm.reminderForm.title" required /></div>
+        <div class="col-md-3">
+          <label class="form-label">Type</label>
+          <select class="form-select" ng-model="vm.reminderForm.reminderType" required>
+            <option value="FOLLOW_UP">Follow-up</option>
+            <option value="INTERVIEW_PREP">Interview Prep</option>
+            <option value="DEADLINE">Deadline</option>
+            <option value="CUSTOM">Custom</option>
+          </select>
+        </div>
+        <div class="col-md-3"><label class="form-label">Due</label><input type="datetime-local" class="form-control app-input" ng-model="vm.reminderForm.dueAt" required /></div>
+        <div class="col-md-2">
+          <label class="form-label">Status</label>
+          <select class="form-select" ng-model="vm.reminderForm.status" required>
+            <option value="PENDING">Pending</option>
+            <option value="COMPLETED">Completed</option>
+            <option value="DISMISSED">Dismissed</option>
+          </select>
+        </div>
+        <div class="col-12"><label class="form-label">Description</label><textarea class="form-control" ng-model="vm.reminderForm.description" rows="2"></textarea></div>
+        <div class="col-12 d-flex justify-content-end"><button class="btn btn-primary" type="submit">Save Reminder</button></div>
+      </form>
+
+      <div class="table-responsive" ng-if="vm.reminders.length">
+        <table class="table app-table align-middle">
+          <thead><tr><th>Title</th><th>Type</th><th>Due</th><th>Status</th><th class="text-end">Actions</th></tr></thead>
+          <tbody>
+            <tr ng-repeat="item in vm.reminders">
+              <td>{{item.title}}</td>
+              <td>{{item.reminderType}}</td>
+              <td>{{item.dueAt | date:'MMM d, y h:mm a'}}</td>
+              <td>{{item.status}}</td>
+              <td class="text-end">
+                <button class="btn btn-sm btn-soft me-2" ng-click="vm.editReminder(item)">Edit</button>
+                <button class="btn btn-sm btn-danger-soft" ng-click="vm.deleteReminder(item)">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="empty-state py-3" ng-if="!vm.reminders.length"><p class="mb-0">No reminders linked to this application.</p></div>
+    </div>
+
+    <div class="surface-card" ng-show="vm.tab === 'documents'">
+      <h5 class="mb-3">Document Tracking</h5>
+      <form class="row g-3" ng-submit="vm.saveDocuments()">
+        <div class="col-md-6"><label class="form-label">Resume Version</label><input class="form-control app-input" ng-model="vm.documents.resumeVersion" /></div>
+        <div class="col-md-6"><label class="form-label">Cover Letter Version</label><input class="form-control app-input" ng-model="vm.documents.coverLetterVersion" /></div>
+        <div class="col-md-6"><label class="form-label">Resume Reference</label><input class="form-control app-input" ng-model="vm.documents.resumeRef" /></div>
+        <div class="col-md-6"><label class="form-label">Cover Letter Reference</label><input class="form-control app-input" ng-model="vm.documents.coverLetterRef" /></div>
+        <div class="col-md-4"><label class="form-label">Portfolio</label><input class="form-control app-input" ng-model="vm.documents.portfolioRef" /></div>
+        <div class="col-md-4"><label class="form-label">GitHub</label><input class="form-control app-input" ng-model="vm.documents.githubUrl" /></div>
+        <div class="col-md-4"><label class="form-label">LinkedIn</label><input class="form-control app-input" ng-model="vm.documents.linkedinUrl" /></div>
+        <div class="col-12 d-flex justify-content-end"><button class="btn btn-primary" type="submit">Save Documents</button></div>
+      </form>
+    </div>
+
+    <div class="surface-card" ng-show="vm.tab === 'notes'">
+      <h5 class="mb-3">Preparation Notes</h5>
+      <form class="row g-3 mb-4" ng-submit="vm.saveNote()">
+        <div class="col-md-4">
+          <label class="form-label">Category</label>
+          <select class="form-select" ng-model="vm.noteForm.category">
+            <option ng-repeat="category in vm.noteCategories" value="{{category}}">{{category}}</option>
+          </select>
+        </div>
+        <div class="col-md-8"><label class="form-label">Content</label><textarea class="form-control" ng-model="vm.noteForm.content" rows="3"></textarea></div>
+        <div class="col-12 d-flex justify-content-end"><button class="btn btn-primary" type="submit">Save Note</button></div>
+      </form>
+
+      <div class="row g-3" ng-if="vm.notes.length">
+        <div class="col-md-6" ng-repeat="item in vm.notes">
+          <div class="surface-card h-100 p-3 note-card">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <strong>{{item.category}}</strong>
+              <button class="btn btn-sm btn-soft" ng-click="vm.editNote(item)">Edit</button>
+            </div>
+            <p class="mb-1">{{item.content || '-'}}</p>
+            <div class="small-muted">Updated {{item.updatedAt | date:'MMM d, y h:mm a'}}</div>
+          </div>
+        </div>
+      </div>
+      <div class="empty-state py-3" ng-if="!vm.notes.length"><p class="mb-0">No notes yet.</p></div>
+    </div>
+
+    <div class="surface-card" ng-show="vm.tab === 'contacts'">
+      <h5 class="mb-3">Networking Contacts</h5>
+      <form class="row g-3 mb-4" ng-submit="vm.saveContact()">
+        <div class="col-md-6"><label class="form-label">Recruiter Name</label><input class="form-control app-input" ng-model="vm.contactForm.recruiterName" /></div>
+        <div class="col-md-6"><label class="form-label">Recruiter Email</label><input type="email" class="form-control app-input" ng-model="vm.contactForm.recruiterEmail" /></div>
+        <div class="col-md-6"><label class="form-label">Referral Contact</label><input class="form-control app-input" ng-model="vm.contactForm.referralContactName" /></div>
+        <div class="col-md-6"><label class="form-label">Referral Email</label><input type="email" class="form-control app-input" ng-model="vm.contactForm.referralContactEmail" /></div>
+        <div class="col-md-4"><label class="form-label">Outreach Date</label><input type="date" class="form-control app-input" ng-model="vm.contactForm.outreachDate" /></div>
+        <div class="col-md-4 d-flex align-items-end"><div class="form-check"><input class="form-check-input" type="checkbox" id="refReq" ng-model="vm.contactForm.referralRequested" /><label class="form-check-label" for="refReq">Referral requested</label></div></div>
+        <div class="col-md-4 d-flex align-items-end"><div class="form-check"><input class="form-check-input" type="checkbox" id="refRec" ng-model="vm.contactForm.referralReceived" /><label class="form-check-label" for="refRec">Referral received</label></div></div>
+        <div class="col-12"><label class="form-label">Follow-up Notes</label><textarea class="form-control" ng-model="vm.contactForm.followUpNotes" rows="2"></textarea></div>
+        <div class="col-12 d-flex justify-content-end"><button class="btn btn-primary" type="submit">Save Contact</button></div>
+      </form>
+
+      <div class="table-responsive" ng-if="vm.contacts.length">
+        <table class="table app-table align-middle">
+          <thead><tr><th>Recruiter</th><th>Referral</th><th>Outreach</th><th class="text-end">Actions</th></tr></thead>
+          <tbody>
+            <tr ng-repeat="item in vm.contacts">
+              <td>{{item.recruiterName || '-'}}<div class="small-muted">{{item.recruiterEmail || ''}}</div></td>
+              <td>{{item.referralContactName || '-'}}<div class="small-muted">{{item.referralContactEmail || ''}}</div></td>
+              <td>{{item.outreachDate || '-'}}</td>
+              <td class="text-end">
+                <button class="btn btn-sm btn-soft me-2" ng-click="vm.editContact(item)">Edit</button>
+                <button class="btn btn-sm btn-danger-soft" ng-click="vm.deleteContact(item)">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="empty-state py-3" ng-if="!vm.contacts.length"><p class="mb-0">No contacts yet.</p></div>
+    </div>
+
+    <div class="surface-card" ng-show="vm.tab === 'offers'">
+      <h5 class="mb-3">Offer Management</h5>
+      <form class="row g-3 mb-4" ng-submit="vm.saveOffer()">
+        <div class="col-md-3"><label class="form-label">Base Salary</label><input type="number" step="0.01" class="form-control app-input" ng-model="vm.offerForm.baseSalary" /></div>
+        <div class="col-md-3"><label class="form-label">Bonus</label><input type="number" step="0.01" class="form-control app-input" ng-model="vm.offerForm.bonus" /></div>
+        <div class="col-md-3"><label class="form-label">Equity</label><input type="number" step="0.01" class="form-control app-input" ng-model="vm.offerForm.equity" /></div>
+        <div class="col-md-3"><label class="form-label">Currency</label><input class="form-control app-input" ng-model="vm.offerForm.currency" required /></div>
+        <div class="col-md-4"><label class="form-label">Location</label><input class="form-control app-input" ng-model="vm.offerForm.location" /></div>
+        <div class="col-md-4"><label class="form-label">Offer Date</label><input type="date" class="form-control app-input" ng-model="vm.offerForm.offerDate" /></div>
+        <div class="col-md-4"><label class="form-label">Response Deadline</label><input type="date" class="form-control app-input" ng-model="vm.offerForm.responseDeadline" /></div>
+        <div class="col-md-4">
+          <label class="form-label">Decision Status</label>
+          <select class="form-select" ng-model="vm.offerForm.decisionStatus" required>
+            <option value="PENDING">Pending</option>
+            <option value="NEGOTIATING">Negotiating</option>
+            <option value="ACCEPTED">Accepted</option>
+            <option value="REJECTED">Rejected</option>
+            <option value="EXPIRED">Expired</option>
+          </select>
+        </div>
+        <div class="col-md-8"><label class="form-label">Notes</label><textarea class="form-control" ng-model="vm.offerForm.notes" rows="2"></textarea></div>
+        <div class="col-12 d-flex justify-content-end"><button class="btn btn-primary" type="submit">Save Offer</button></div>
+      </form>
+
+      <div class="table-responsive" ng-if="vm.offers.length">
+        <table class="table app-table align-middle">
+          <thead><tr><th>Total Compensation</th><th>Status</th><th>Deadline</th><th class="text-end">Actions</th></tr></thead>
+          <tbody>
+            <tr ng-repeat="item in vm.offers">
+              <td>{{item.currency}} {{item.baseSalary || 0}} + {{item.bonus || 0}} bonus + {{item.equity || 0}} equity</td>
+              <td>{{item.decisionStatus}}</td>
+              <td>{{item.responseDeadline || '-'}}</td>
+              <td class="text-end">
+                <button class="btn btn-sm btn-soft me-2" ng-click="vm.editOffer(item)">Edit</button>
+                <button class="btn btn-sm btn-danger-soft" ng-click="vm.deleteOffer(item)">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="empty-state py-3" ng-if="!vm.offers.length"><p class="mb-0">No offers yet.</p></div>
+    </div>
+  </div>
+</section>

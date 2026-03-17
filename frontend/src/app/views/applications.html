@@ -1,10 +1,10 @@
 <section class="page-enter">
   <div class="section-head mb-4">
     <div>
-      <p class="section-kicker">Pipeline Dashboard</p>
+      <p class="section-kicker">Pipeline Workspace</p>
       <h1 class="section-title">Applications</h1>
       <p class="section-subtitle">
-        Track progress across your job search with clear status signals and fast actions.
+        Search, filter, sort, and manage a growing application pipeline with stage timing and stalled highlights.
       </p>
     </div>
 
@@ -16,27 +16,79 @@
 
   <div class="stat-grid mb-4" ng-if="!vm.loading">
     <div class="stat-chip">
-      <span class="label">Total</span>
-      <span class="value">{{vm.applications.length}}</span>
+      <span class="label">Visible results</span>
+      <span class="value">{{vm.total}}</span>
     </div>
-    <div class="stat-chip" ng-repeat="(status, count) in vm.counts">
-      <span class="label">{{status}}</span>
+    <div class="stat-chip" ng-repeat="(stageName, count) in vm.counts">
+      <span class="label">{{stageName}}</span>
       <span class="value">{{count}}</span>
     </div>
   </div>
 
   <div class="surface-card mb-4">
-    <div class="row g-3 align-items-center">
-      <div class="col-lg-6">
-        <label class="form-label mb-1">Filter applications</label>
-        <input
-          class="form-control app-input"
-          placeholder="Search by company, role, or status"
-          ng-model="vm.filterText"
-        />
+    <div class="row g-3">
+      <div class="col-lg-4">
+        <label class="form-label">Search</label>
+        <input class="form-control app-input" ng-model="vm.query.q" placeholder="Company, role, notes, location" />
       </div>
-      <div class="col-lg-6 text-lg-end">
-        <span class="small-muted">Use quick edit and delete actions directly from the table.</span>
+      <div class="col-lg-2">
+        <label class="form-label">Stage</label>
+        <select class="form-select" ng-model="vm.query.stageId">
+          <option value="">All</option>
+          <option ng-repeat="stage in vm.stages" value="{{stage.id}}">{{stage.name}}</option>
+        </select>
+      </div>
+      <div class="col-lg-2">
+        <label class="form-label">Work mode</label>
+        <select class="form-select" ng-model="vm.query.workMode">
+          <option value="">All</option>
+          <option value="REMOTE">Remote</option>
+          <option value="HYBRID">Hybrid</option>
+          <option value="ONSITE">Onsite</option>
+        </select>
+      </div>
+      <div class="col-lg-2">
+        <label class="form-label">Source</label>
+        <input class="form-control app-input" ng-model="vm.query.source" placeholder="Referral, portal..." />
+      </div>
+      <div class="col-lg-2">
+        <label class="form-label">Sort</label>
+        <select class="form-select" ng-model="vm.query.sortBy">
+          <option value="STAGE_UPDATED">Stage Updated</option>
+          <option value="MOST_RECENT">Most Recent</option>
+          <option value="OLDEST">Oldest</option>
+          <option value="DEADLINE">Deadline</option>
+          <option value="PRIORITY">Priority</option>
+        </select>
+      </div>
+      <div class="col-lg-3">
+        <label class="form-label">Location</label>
+        <input class="form-control app-input" ng-model="vm.query.location" placeholder="City, state..." />
+      </div>
+      <div class="col-lg-2">
+        <label class="form-label">Sponsorship</label>
+        <select class="form-select" ng-model="vm.query.sponsorship">
+          <option value="">All</option>
+          <option value="true">Yes</option>
+          <option value="false">No</option>
+        </select>
+      </div>
+      <div class="col-lg-3">
+        <label class="form-label">Sort Direction</label>
+        <select class="form-select" ng-model="vm.query.sortDir">
+          <option value="DESC">Descending</option>
+          <option value="ASC">Ascending</option>
+        </select>
+      </div>
+      <div class="col-lg-2 d-flex align-items-end">
+        <div class="form-check mb-2">
+          <input class="form-check-input" id="showDeleted" type="checkbox" ng-model="vm.includeDeleted" />
+          <label class="form-check-label" for="showDeleted">Show deleted</label>
+        </div>
+      </div>
+      <div class="col-lg-2 d-flex align-items-end justify-content-lg-end gap-2">
+        <button class="btn btn-soft" type="button" ng-click="vm.resetFilters()">Reset</button>
+        <button class="btn btn-primary" type="button" ng-click="vm.search()">Apply</button>
       </div>
     </div>
   </div>
@@ -54,36 +106,58 @@
           <tr>
             <th>Company</th>
             <th>Role</th>
-            <th>Status</th>
+            <th>Stage</th>
+            <th>Priority</th>
+            <th>Days in Stage</th>
+            <th>Deadline</th>
             <th>Applied</th>
             <th class="text-end">Actions</th>
           </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="app in vm.applications | filter:vm.matchesFilter">
+          <tr ng-repeat="app in vm.items" ng-class="{'row-stalled': app.stalled}">
             <td>
               <strong>{{app.company}}</strong>
+              <div class="small-muted" ng-if="app.location">{{app.location}}</div>
             </td>
             <td>{{app.role}}</td>
             <td>
-              <span class="status-pill" ng-class="vm.statusClass(app.status)">{{app.status}}</span>
+              <span class="status-pill" ng-class="vm.stageClass(app)">{{app.stage.name}}</span>
             </td>
+            <td>
+              <span class="priority-pill" ng-class="vm.priorityClass(app.priority)">{{app.priority}}</span>
+            </td>
+            <td>
+              {{app.daysInCurrentStage}}
+              <span class="small-muted" ng-if="app.stalled">(stalled)</span>
+            </td>
+            <td>{{app.applicationDeadline || '-'}}</td>
             <td>{{app.appliedAt || '-'}}</td>
             <td class="text-end">
-              <button class="btn btn-sm btn-soft me-2" ng-click="vm.edit(app)">Edit</button>
-              <button class="btn btn-sm btn-danger-soft" ng-click="vm.delete(app)">Delete</button>
+              <button class="btn btn-sm btn-soft me-2" ng-click="vm.open(app)">Open</button>
+              <button class="btn btn-sm btn-soft me-2" ng-click="vm.edit(app)" ng-if="!vm.includeDeleted">Edit</button>
+              <button class="btn btn-sm btn-danger-soft" ng-click="vm.delete(app)" ng-if="!vm.includeDeleted">Delete</button>
+              <button class="btn btn-sm btn-primary" ng-click="vm.restore(app)" ng-if="vm.includeDeleted">Restore</button>
             </td>
           </tr>
-          <tr ng-if="(vm.applications | filter:vm.matchesFilter).length === 0">
-            <td colspan="5">
+          <tr ng-if="vm.items.length === 0">
+            <td colspan="8">
               <div class="empty-state">
-                <h3>No matching applications</h3>
-                <p class="mb-0">Try a different filter or add a new application.</p>
+                <h3>No applications found</h3>
+                <p class="mb-0">Adjust filters or create a new application.</p>
               </div>
             </td>
           </tr>
         </tbody>
       </table>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center px-3 py-2 border-top">
+      <span class="small-muted">Page {{vm.page + 1}} · {{vm.total}} total records</span>
+      <div class="d-flex gap-2">
+        <button class="btn btn-sm btn-soft" ng-click="vm.prevPage()" ng-disabled="vm.page === 0">Previous</button>
+        <button class="btn btn-sm btn-soft" ng-click="vm.nextPage()" ng-disabled="!vm.hasNext">Next</button>
+      </div>
     </div>
   </div>
 </section>

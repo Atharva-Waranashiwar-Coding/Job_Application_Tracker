@@ -4,9 +4,13 @@
       <p class="section-kicker">Application Form</p>
       <h1 class="section-title">{{vm.id ? 'Edit application' : 'Add new application'}}</h1>
       <p class="section-subtitle">
-        Capture all details you need to move this opportunity forward.
+        Capture the role snapshot, stage, and preparation details so you can track every step with context.
       </p>
     </div>
+  </div>
+
+  <div ng-if="vm.loading" class="surface-card loading-shell mb-4">
+    <div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading</span></div>
   </div>
 
   <div class="surface-card form-shell">
@@ -21,14 +25,74 @@
         <input class="form-control app-input" ng-model="vm.form.role" required />
       </div>
 
-      <div class="col-md-6">
-        <label class="form-label">Status</label>
-        <select class="form-select" ng-model="vm.form.status" ng-options="s for s in vm.statuses"></select>
+      <div class="col-md-4">
+        <label class="form-label">Stage</label>
+        <select class="form-select" ng-model="vm.form.stageId" required>
+          <option value="" disabled>Select stage</option>
+          <option ng-repeat="stage in vm.stages" value="{{stage.id}}">{{stage.name}}</option>
+        </select>
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label">Priority</label>
+        <select class="form-select" ng-model="vm.form.priority">
+          <option ng-repeat="priority in vm.priorities" value="{{priority}}">{{priority}}</option>
+        </select>
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label">Applied date</label>
+        <input type="date" class="form-control app-input" ng-model="vm.form.appliedAt" />
       </div>
 
       <div class="col-md-6">
-        <label class="form-label">Applied date</label>
-        <input type="date" class="form-control app-input" ng-model="vm.form.appliedAt" />
+        <label class="form-label">Location</label>
+        <input class="form-control app-input" ng-model="vm.form.location" placeholder="City, state, country" />
+      </div>
+
+      <div class="col-md-3">
+        <label class="form-label">Work mode</label>
+        <select class="form-select" ng-model="vm.form.workMode">
+          <option value="">Unknown</option>
+          <option ng-repeat="mode in vm.workModes" value="{{mode}}">{{mode}}</option>
+        </select>
+      </div>
+
+      <div class="col-md-3">
+        <label class="form-label">Employment</label>
+        <select class="form-select" ng-model="vm.form.employmentType">
+          <option value="">Unknown</option>
+          <option ng-repeat="type in vm.employmentTypes" value="{{type}}">{{type}}</option>
+        </select>
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label">Salary Range</label>
+        <input class="form-control app-input" ng-model="vm.form.salaryRange" placeholder="$120k-$150k" />
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label">Sponsorship</label>
+        <select class="form-select" ng-model="vm.form.sponsorshipAvailable">
+          <option value="">Unknown</option>
+          <option ng-value="true">Available</option>
+          <option ng-value="false">Not available</option>
+        </select>
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label">Source</label>
+        <input class="form-control app-input" ng-model="vm.form.applicationSource" placeholder="Referral, company website" />
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Application Deadline</label>
+        <input type="date" class="form-control app-input" ng-model="vm.form.applicationDeadline" />
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Posting URL</label>
+        <input type="url" class="form-control app-input" ng-model="vm.form.postingUrl" placeholder="https://..." />
       </div>
 
       <div class="col-12">
@@ -37,8 +101,13 @@
       </div>
 
       <div class="col-12">
+        <label class="form-label">Job Description Snapshot</label>
+        <textarea class="form-control" ng-model="vm.form.jobDescription" rows="5"></textarea>
+      </div>
+
+      <div class="col-12">
         <label class="form-label">Notes</label>
-        <textarea class="form-control" ng-model="vm.form.notes" rows="5" placeholder="Interview process, contacts, prep notes..."></textarea>
+        <textarea class="form-control" ng-model="vm.form.notes" rows="4" placeholder="Interview process, prep notes, etc."></textarea>
       </div>
 
       <div class="col-12 d-flex flex-column flex-sm-row justify-content-end gap-2 mt-2">
