@@ -28,6 +28,16 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
         return ResponseEntity.status(HttpStatusCode.valueOf(409)).body(Map.of("error", ex.getMessage()));
     }
 
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity<Object> handleBadRequest(IllegalArgumentException ex) {
+        return ResponseEntity.badRequest().body(Map.of("error", ex.getMessage()));
+    }
+
+    @ExceptionHandler(IllegalStateException.class)
+    public ResponseEntity<Object> handleIllegalState(IllegalStateException ex) {
+        return ResponseEntity.status(HttpStatusCode.valueOf(409)).body(Map.of("error", ex.getMessage()));
+    }
+
     @Override
     protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
                                                                  HttpHeaders headers,

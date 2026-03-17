@@ -20,10 +20,14 @@ public class UserService {
 
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
+    private final StageService stageService;
 
-    public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
+    public UserService(UserRepository userRepository,
+                       PasswordEncoder passwordEncoder,
+                       StageService stageService) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
+        this.stageService = stageService;
     }
 
     public List<UserDto> listUsers() {
@@ -59,6 +63,7 @@ public class UserService {
         entity.setPasswordHash(passwordEncoder.encode(request.getPassword()));
 
         UserEntity saved = userRepository.save(entity);
+        stageService.createDefaultStagesForUser(saved);
         return toDto(saved);
     }
 
