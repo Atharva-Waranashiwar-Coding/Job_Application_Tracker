@@ -1,0 +1,50 @@
+<section class="page-enter">
+  <div class="section-head mb-4">
+    <div>
+      <p class="section-kicker">Audit Trail</p>
+      <h1 class="section-title">Activity Log</h1>
+      <p class="section-subtitle">
+        Review all major updates across your application workflow.
+      </p>
+    </div>
+
+    <div class="d-flex flex-wrap gap-2">
+      <a class="btn btn-soft" href="#/applications">Back to applications</a>
+    </div>
+  </div>
+
+  <div ng-if="vm.loading" class="surface-card loading-shell">
+    <div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading</span></div>
+  </div>
+
+  <div class="surface-card table-card" ng-if="!vm.loading">
+    <div class="table-responsive">
+      <table class="table app-table align-middle">
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Action</th>
+            <th>Application</th>
+            <th>Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="log in vm.logs">
+            <td>{{log.createdAt | date:'MMM d, y h:mm a'}}</td>
+            <td><span class="status-pill status-default">{{log.action}}</span></td>
+            <td>#{{log.applicationId}}</td>
+            <td>{{log.details}}</td>
+          </tr>
+          <tr ng-if="vm.logs.length === 0">
+            <td colspan="4">
+              <div class="empty-state">
+                <h3>No activity yet</h3>
+                <p class="mb-0">Actions on applications will appear here.</p>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

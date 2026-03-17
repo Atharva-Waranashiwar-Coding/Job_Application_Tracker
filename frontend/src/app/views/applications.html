@@ -1,0 +1,89 @@
+<section class="page-enter">
+  <div class="section-head mb-4">
+    <div>
+      <p class="section-kicker">Pipeline Dashboard</p>
+      <h1 class="section-title">Applications</h1>
+      <p class="section-subtitle">
+        Track progress across your job search with clear status signals and fast actions.
+      </p>
+    </div>
+
+    <div class="d-flex flex-wrap gap-2">
+      <a class="btn btn-soft" href="#/kanban">Kanban view</a>
+      <a class="btn btn-primary" href="#/applications/new">New application</a>
+    </div>
+  </div>
+
+  <div class="stat-grid mb-4" ng-if="!vm.loading">
+    <div class="stat-chip">
+      <span class="label">Total</span>
+      <span class="value">{{vm.applications.length}}</span>
+    </div>
+    <div class="stat-chip" ng-repeat="(status, count) in vm.counts">
+      <span class="label">{{status}}</span>
+      <span class="value">{{count}}</span>
+    </div>
+  </div>
+
+  <div class="surface-card mb-4">
+    <div class="row g-3 align-items-center">
+      <div class="col-lg-6">
+        <label class="form-label mb-1">Filter applications</label>
+        <input
+          class="form-control app-input"
+          placeholder="Search by company, role, or status"
+          ng-model="vm.filterText"
+        />
+      </div>
+      <div class="col-lg-6 text-lg-end">
+        <span class="small-muted">Use quick edit and delete actions directly from the table.</span>
+      </div>
+    </div>
+  </div>
+
+  <div ng-if="vm.loading" class="surface-card loading-shell">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading</span>
+    </div>
+  </div>
+
+  <div class="surface-card table-card" ng-if="!vm.loading">
+    <div class="table-responsive">
+      <table class="table app-table align-middle">
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th>Role</th>
+            <th>Status</th>
+            <th>Applied</th>
+            <th class="text-end">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="app in vm.applications | filter:vm.matchesFilter">
+            <td>
+              <strong>{{app.company}}</strong>
+            </td>
+            <td>{{app.role}}</td>
+            <td>
+              <span class="status-pill" ng-class="vm.statusClass(app.status)">{{app.status}}</span>
+            </td>
+            <td>{{app.appliedAt || '-'}}</td>
+            <td class="text-end">
+              <button class="btn btn-sm btn-soft me-2" ng-click="vm.edit(app)">Edit</button>
+              <button class="btn btn-sm btn-danger-soft" ng-click="vm.delete(app)">Delete</button>
+            </td>
+          </tr>
+          <tr ng-if="(vm.applications | filter:vm.matchesFilter).length === 0">
+            <td colspan="5">
+              <div class="empty-state">
+                <h3>No matching applications</h3>
+                <p class="mb-0">Try a different filter or add a new application.</p>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

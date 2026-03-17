@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="jobTrackerApp">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerForge | Job Application Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="app/styles/theme.css" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark app-navbar" ng-controller="NavController as nav">
+    <div class="container-fluid px-3 px-lg-4">
+      <a class="navbar-brand app-brand" href="#/applications">
+        <span class="brand-dot"></span>
+        <span>CareerForge</span>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#appNavbar"
+        aria-controls="appNavbar"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="appNavbar">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" ng-if="nav.isAuthenticated()">
+          <li class="nav-item"><a class="nav-link" href="#/applications">Applications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#/kanban">Kanban</a></li>
+          <li class="nav-item"><a class="nav-link" href="#/activity">Activity</a></li>
+          <li class="nav-item" ng-if="nav.isAdmin()"><a class="nav-link" href="#/admin/users">Admin</a></li>
+        </ul>
+
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-lg-1">
+          <li class="nav-item" ng-if="nav.isAuthenticated()">
+            <span class="user-pill">{{nav.username()}}</span>
+          </li>
+          <li class="nav-item" ng-if="nav.isAuthenticated()">
+            <a class="nav-link" href="#" ng-click="nav.logout()">Logout</a>
+          </li>
+          <li class="nav-item" ng-if="!nav.isAuthenticated()">
+            <a class="nav-link" href="#/login">Login</a>
+          </li>
+          <li class="nav-item" ng-if="!nav.isAuthenticated()">
+            <a class="nav-link" href="#/signup">Sign up</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="app-main container-xl px-3 px-md-4">
+    <div ng-view></div>
+  </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular-route.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="app/app.js"></script>
+  <script src="app/services/auth.service.js"></script>
+  <script src="app/services/auth.interceptor.js"></script>
+  <script src="app/services/api.service.js"></script>
+  <script src="app/controllers/login.controller.js"></script>
+  <script src="app/controllers/signup.controller.js"></script>
+  <script src="app/controllers/forgot-password.controller.js"></script>
+  <script src="app/controllers/applications.controller.js"></script>
+  <script src="app/controllers/application-form.controller.js"></script>
+  <script src="app/controllers/kanban.controller.js"></script>
+  <script src="app/controllers/activity.controller.js"></script>
+  <script src="app/controllers/admin.controller.js"></script>
+  <script src="app/controllers/nav.controller.js"></script>
+</body>
+</html>

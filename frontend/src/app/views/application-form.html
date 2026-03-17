@@ -1,0 +1,50 @@
+<section class="page-enter">
+  <div class="section-head mb-4">
+    <div>
+      <p class="section-kicker">Application Form</p>
+      <h1 class="section-title">{{vm.id ? 'Edit application' : 'Add new application'}}</h1>
+      <p class="section-subtitle">
+        Capture all details you need to move this opportunity forward.
+      </p>
+    </div>
+  </div>
+
+  <div class="surface-card form-shell">
+    <form ng-submit="vm.save()" class="row g-3">
+      <div class="col-md-6">
+        <label class="form-label">Company</label>
+        <input class="form-control app-input" ng-model="vm.form.company" required />
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Role</label>
+        <input class="form-control app-input" ng-model="vm.form.role" required />
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Status</label>
+        <select class="form-select" ng-model="vm.form.status" ng-options="s for s in vm.statuses"></select>
+      </div>
+
+      <div class="col-md-6">
+        <label class="form-label">Applied date</label>
+        <input type="date" class="form-control app-input" ng-model="vm.form.appliedAt" />
+      </div>
+
+      <div class="col-12">
+        <label class="form-label">Source URL</label>
+        <input type="url" class="form-control app-input" ng-model="vm.form.sourceUrl" placeholder="https://company.com/jobs/..." />
+      </div>
+
+      <div class="col-12">
+        <label class="form-label">Notes</label>
+        <textarea class="form-control" ng-model="vm.form.notes" rows="5" placeholder="Interview process, contacts, prep notes..."></textarea>
+      </div>
+
+      <div class="col-12 d-flex flex-column flex-sm-row justify-content-end gap-2 mt-2">
+        <button class="btn btn-soft" type="button" ng-click="vm.cancel()">Cancel</button>
+        <button class="btn btn-primary" type="submit">{{vm.id ? 'Save changes' : 'Save application'}}</button>
+      </div>
+    </form>
+  </div>
+</section>

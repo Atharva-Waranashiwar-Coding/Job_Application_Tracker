@@ -1,0 +1,54 @@
+<section class="auth-shell page-enter">
+  <aside class="auth-side d-none d-lg-flex">
+    <div>
+      <p class="section-kicker text-light">Create Account</p>
+      <h2>Build your professional job tracker hub.</h2>
+      <p>
+        Set up your workspace and start managing your career pipeline with clarity.
+      </p>
+    </div>
+    <ul class="auth-feature-list">
+      <li>Customizable statuses for every stage of your process.</li>
+      <li>Fast filtering and instant overview of what matters now.</li>
+      <li>Designed for focused, consistent execution.</li>
+    </ul>
+  </aside>
+
+  <div class="auth-card">
+    <p class="section-kicker">New Workspace</p>
+    <h1 class="section-title">Create your account</h1>
+    <p class="section-subtitle mb-4">
+      Use a password with at least one letter and one number.
+    </p>
+
+    <form class="auth-form" ng-submit="vm.signup()">
+      <div class="mb-3">
+        <label class="form-label">Username</label>
+        <input class="form-control app-input" ng-model="vm.username" autocomplete="username" required />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Display Name</label>
+        <input class="form-control app-input" ng-model="vm.displayName" autocomplete="name" required />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control app-input" ng-model="vm.password" autocomplete="new-password" required />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Confirm Password</label>
+        <input type="password" class="form-control app-input" ng-model="vm.confirmPassword" autocomplete="new-password" required />
+      </div>
+
+      <div class="alert alert-danger py-2" ng-if="vm.error">{{vm.error}}</div>
+
+      <button class="btn btn-primary w-100 mt-2" type="submit">Create account</button>
+
+      <div class="mt-4">
+        <a class="btn btn-link app-link" href="#/login">Already have an account? Sign in</a>
+      </div>
+    </form>
+  </div>
+</section>

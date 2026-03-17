@@ -1,0 +1,48 @@
+<section class="page-enter">
+  <div class="section-head mb-4">
+    <div>
+      <p class="section-kicker">Access Control</p>
+      <h1 class="section-title">Admin - User Directory</h1>
+      <p class="section-subtitle">
+        Monitor registered users, roles, and account creation timelines.
+      </p>
+    </div>
+  </div>
+
+  <div ng-if="vm.loading" class="surface-card loading-shell">
+    <div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading</span></div>
+  </div>
+
+  <div class="surface-card table-card" ng-if="!vm.loading">
+    <div class="table-responsive">
+      <table class="table app-table align-middle">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Display Name</th>
+            <th>Role</th>
+            <th>Created</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="user in vm.users">
+            <td>#{{user.id}}</td>
+            <td><strong>{{user.username}}</strong></td>
+            <td>{{user.displayName}}</td>
+            <td><span class="status-pill status-default">{{user.role}}</span></td>
+            <td>{{user.createdAt | date:'MMM d, y h:mm a'}}</td>
+          </tr>
+          <tr ng-if="vm.users.length === 0">
+            <td colspan="5">
+              <div class="empty-state">
+                <h3>No users found</h3>
+                <p class="mb-0">Newly created users will appear in this table.</p>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

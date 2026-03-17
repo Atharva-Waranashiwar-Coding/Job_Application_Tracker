@@ -1,0 +1,45 @@
+<section class="auth-shell page-enter">
+  <aside class="auth-side d-none d-lg-flex">
+    <div>
+      <p class="section-kicker text-light">Job Search OS</p>
+      <h2>Run your search like a high-performing team.</h2>
+      <p>
+        Organize every application, interview, and follow-up in one focused workspace.
+      </p>
+    </div>
+    <ul class="auth-feature-list">
+      <li>Pipeline visibility from first outreach to final offer.</li>
+      <li>Role-specific notes, links, and progress tracking.</li>
+      <li>Built-in activity history for accountability.</li>
+    </ul>
+  </aside>
+
+  <div class="auth-card">
+    <p class="section-kicker">Welcome Back</p>
+    <h1 class="section-title">Sign in to CareerForge</h1>
+    <p class="section-subtitle mb-4">
+      Continue where you left off and keep your search momentum.
+    </p>
+
+    <form class="auth-form" ng-submit="vm.login()">
+      <div class="mb-3">
+        <label class="form-label">Username</label>
+        <input class="form-control app-input" ng-model="vm.username" autocomplete="username" required />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" class="form-control app-input" ng-model="vm.password" autocomplete="current-password" required />
+      </div>
+
+      <div class="alert alert-danger py-2" ng-if="vm.error">{{vm.error}}</div>
+
+      <button class="btn btn-primary w-100 mt-2" type="submit">Sign in</button>
+
+      <div class="d-flex flex-column flex-sm-row justify-content-between mt-4 gap-2">
+        <a class="btn btn-link app-link" href="#/signup">Create an account</a>
+        <a class="btn btn-link app-link" href="#/forgot-password">Forgot password?</a>
+      </div>
+    </form>
+  </div>
+</section>

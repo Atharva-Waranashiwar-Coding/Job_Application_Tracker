@@ -1,0 +1,43 @@
+<section class="page-enter">
+  <div class="section-head mb-4">
+    <div>
+      <p class="section-kicker">Visual Workflow</p>
+      <h1 class="section-title">Kanban Board</h1>
+      <p class="section-subtitle">
+        Scan each status lane and move quickly on the next best opportunities.
+      </p>
+    </div>
+
+    <div class="d-flex flex-wrap gap-2">
+      <a class="btn btn-soft" href="#/applications">Back to list</a>
+      <a class="btn btn-primary" href="#/applications/new">Add application</a>
+    </div>
+  </div>
+
+  <div ng-if="vm.loading" class="surface-card loading-shell">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading</span>
+    </div>
+  </div>
+
+  <div class="kanban-grid" ng-if="!vm.loading">
+    <article class="kanban-column" ng-repeat="column in vm.columns" ng-class="vm.columnClass(column.name)">
+      <header>
+        <h5>{{column.name}}</h5>
+        <span class="status-pill status-default">{{column.items.length}}</span>
+      </header>
+
+      <div class="kanban-list">
+        <div class="kanban-card" ng-repeat="app in column.items">
+          <div class="company">{{app.company}}</div>
+          <div class="role">{{app.role}}</div>
+          <button class="btn btn-sm btn-soft w-100" ng-click="vm.edit(app)">Open</button>
+        </div>
+
+        <div class="empty-state py-3" ng-if="column.items.length === 0">
+          <p class="mb-0">No applications in this stage.</p>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
