@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.example.jobtracker.ApplicationIntegrationTest" time="2.515" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.example.jobtracker.ApplicationIntegrationTest" time="2.657" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="25"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/Users/atharvawaranashiwar/Documents/Projects/Job_Application_Tracker/backend/target/test-classes:/Users/atharvawaranashiwar/Documents/Projects/Job_Application_Tracker/backend/target/classes:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.1.12/spring-boot-starter-web-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter/3.1.12/spring-boot-starter-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot/3.1.12/spring-boot-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.1.12/spring-boot-autoconfigure-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.1.12/spring-boot-starter-logging-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/ch/qos/logback/logback-classic/1.4.14/logback-classic-1.4.14.jar:/Users/atharvawaranashiwar/.m2/repository/ch/qos/logback/logback-core/1.4.14/logback-core-1.4.14.jar:/Users/atharvawaranashiwar/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.20.0/log4j-to-slf4j-2.20.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/slf4j/jul-to-slf4j/2.0.13/jul-to-slf4j-2.0.13.jar:/Users/atharvawaranashiwar/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/yaml/snakeyaml/1.33/snakeyaml-1.33.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.1.12/spring-boot-starter-json-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.4/jackson-datatype-jdk8-2.15.4.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.4/jackson-datatype-jsr310-2.15.4.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.4/jackson-module-parameter-names-2.15.4.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.1.12/spring-boot-starter-tomcat-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.24/tomcat-embed-core-10.1.24.jar:/Users/atharvawaranashiwar/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.24/tomcat-embed-websocket-10.1.24.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-web/6.0.21/spring-web-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-beans/6.0.21/spring-beans-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/io/micrometer/micrometer-observation/1.11.12/micrometer-observation-1.11.12.jar:/Users/atharvawaranashiwar/.m2/repository/io/micrometer/micrometer-commons/1.11.12/micrometer-commons-1.11.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-webmvc/6.0.21/spring-webmvc-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-context/6.0.21/spring-context-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-expression/6.0.21/spring-expression-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.1.12/spring-boot-starter-data-jpa-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.1.12/spring-boot-starter-aop-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/aspectj/aspectjweaver/1.9.22/aspectjweaver-1.9.22.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.1.12/spring-boot-starter-jdbc-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-jdbc/6.0.21/spring-jdbc-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/hibernate/orm/hibernate-core/6.2.25.Final/hibernate-core-6.2.25.Final.jar:/Users/atharvawaranashiwar/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/atharvawaranashiwar/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/atharvawaranashiwar/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/Users/atharvawaranashiwar/.m2/repository/io/smallrye/jandex/3.0.5/jandex-3.0.5.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar:/Users/atharvawaranashiwar/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar:/Users/atharvawaranashiwar/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:/Users/atharvawaranashiwar/.m2/repository/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar:/Users/atharvawaranashiwar/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/atharvawaranashiwar/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/antlr/antlr4-runtime/4.10.1/antlr4-runtime-4.10.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/data/spring-data-jpa/3.1.12/spring-data-jpa-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/data/spring-data-commons/3.1.12/spring-data-commons-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-orm/6.0.21/spring-orm-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-tx/6.0.21/spring-tx-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/slf4j/slf4j-api/2.0.13/slf4j-api-2.0.13.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-aspects/6.0.21/spring-aspects-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.1.12/spring-boot-starter-security-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-aop/6.0.21/spring-aop-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/security/spring-security-config/6.1.9/spring-security-config-6.1.9.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/security/spring-security-core/6.1.9/spring-security-core-6.1.9.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/security/spring-security-crypto/6.1.9/spring-security-crypto-6.1.9.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/security/spring-security-web/6.1.9/spring-security-web-6.1.9.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.1.12/spring-boot-starter-validation-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.24/tomcat-embed-el-10.1.24.jar:/Users/atharvawaranashiwar/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/Users/atharvawaranashiwar/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/atharvawaranashiwar/.m2/repository/io/jsonwebtoken/jjwt-api/0.11.5/jjwt-api-0.11.5.jar:/Users/atharvawaranashiwar/.m2/repository/io/jsonwebtoken/jjwt-impl/0.11.5/jjwt-impl-0.11.5.jar:/Users/atharvawaranashiwar/.m2/repository/io/jsonwebtoken/jjwt-jackson/0.11.5/jjwt-jackson-0.11.5.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.4/jackson-databind-2.15.4.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.4/jackson-annotations-2.15.4.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.4/jackson-core-2.15.4.jar:/Users/atharvawaranashiwar/.m2/repository/org/postgresql/postgresql/42.6.2/postgresql-42.6.2.jar:/Users/atharvawaranashiwar/.m2/repository/org/checkerframework/checker-qual/3.31.0/checker-qual-3.31.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/flywaydb/flyway-core/9.16.3/flyway-core-9.16.3.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-toml/2.15.4/jackson-dataformat-toml-2.15.4.jar:/Users/atharvawaranashiwar/.m2/repository/org/apache/commons/commons-text/1.10.0/commons-text-1.10.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/2.2.0/springdoc-openapi-starter-webmvc-ui-2.2.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/2.2.0/springdoc-openapi-starter-webmvc-api-2.2.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/springdoc/springdoc-openapi-starter-common/2.2.0/springdoc-openapi-starter-common-2.2.0.jar:/Users/atharvawaranashiwar/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.15/swagger-core-jakarta-2.2.15.jar:/Users/atharvawaranashiwar/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.15/swagger-annotations-jakarta-2.2.15.jar:/Users/atharvawaranashiwar/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.15/swagger-models-jakarta-2.2.15.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.15.4/jackson-dataformat-yaml-2.15.4.jar:/Users/atharvawaranashiwar/.m2/repository/org/webjars/swagger-ui/5.2.0/swagger-ui-5.2.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/projectlombok/lombok/1.18.32/lombok-1.18.32.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.1.12/spring-boot-starter-test-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-test/3.1.12/spring-boot-test-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.1.12/spring-boot-test-autoconfigure-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/Users/atharvawaranashiwar/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/Users/atharvawaranashiwar/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/Users/atharvawaranashiwar/.m2/repository/net/minidev/json-smart/2.4.11/json-smart-2.4.11.jar:/Users/atharvawaranashiwar/.m2/repository/net/minidev/accessors-smart/2.4.11/accessors-smart-2.4.11.jar:/Users/atharvawaranashiwar/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/atharvawaranashiwar/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/atharvawaranashiwar/.m2/repository/org/junit/jupiter/junit-jupiter/5.9.3/junit-jupiter-5.9.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.3/junit-jupiter-api-5.9.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/junit/platform/junit-platform-commons/1.9.3/junit-platform-commons-1.9.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/atharvawaranashiwar/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.3/junit-jupiter-params-5.9.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.3/junit-jupiter-engine-5.9.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/junit/platform/junit-platform-engine/1.9.3/junit-platform-engine-1.9.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/mockito/mockito-junit-jupiter/5.3.1/mockito-junit-jupiter-5.3.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/atharvawaranashiwar/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-core/6.0.21/spring-core-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-jcl/6.0.21/spring-jcl-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-test/6.0.21/spring-test-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/testcontainers/junit-jupiter/1.18.3/junit-jupiter-1.18.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/testcontainers/testcontainers/1.18.3/testcontainers-1.18.3.jar:/Users/atharvawaranashiwar/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/atharvawaranashiwar/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/Users/atharvawaranashiwar/.m2/repository/org/apache/commons/commons-compress/1.23.0/commons-compress-1.23.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/rnorth/duct-tape/duct-tape/1.0.8/duct-tape-1.0.8.jar:/Users/atharvawaranashiwar/.m2/repository/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar:/Users/atharvawaranashiwar/.m2/repository/com/github/docker-java/docker-java-api/3.3.0/docker-java-api-3.3.0.jar:/Users/atharvawaranashiwar/.m2/repository/com/github/docker-java/docker-java-transport-zerodep/3.3.0/docker-java-transport-zerodep-3.3.0.jar:/Users/atharvawaranashiwar/.m2/repository/com/github/docker-java/docker-java-transport/3.3.0/docker-java-transport-3.3.0.jar:/Users/atharvawaranashiwar/.m2/repository/net/java/dev/jna/jna/5.12.1/jna-5.12.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/testcontainers/postgresql/1.18.3/postgresql-1.18.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/testcontainers/jdbc/1.18.3/jdbc-1.18.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/testcontainers/database-commons/1.18.3/database-commons-1.18.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/mockito/mockito-core/5.3.1/mockito-core-5.3.1.jar:/Users/atharvawaranashiwar/.m2/repository/net/bytebuddy/byte-buddy/1.14.16/byte-buddy-1.14.16.jar:/Users/atharvawaranashiwar/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.16/byte-buddy-agent-1.14.16.jar:/Users/atharvawaranashiwar/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:"/>
+    <property name="java.class.path" value="/Users/atharvawaranashiwar/Documents/Projects/Job_Application_Tracker/backend/target/test-classes:/Users/atharvawaranashiwar/Documents/Projects/Job_Application_Tracker/backend/target/classes:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.1.12/spring-boot-starter-web-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter/3.1.12/spring-boot-starter-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot/3.1.12/spring-boot-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.1.12/spring-boot-autoconfigure-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.1.12/spring-boot-starter-logging-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/ch/qos/logback/logback-classic/1.4.14/logback-classic-1.4.14.jar:/Users/atharvawaranashiwar/.m2/repository/ch/qos/logback/logback-core/1.4.14/logback-core-1.4.14.jar:/Users/atharvawaranashiwar/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.20.0/log4j-to-slf4j-2.20.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/slf4j/jul-to-slf4j/2.0.13/jul-to-slf4j-2.0.13.jar:/Users/atharvawaranashiwar/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/yaml/snakeyaml/1.33/snakeyaml-1.33.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.1.12/spring-boot-starter-json-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.4/jackson-datatype-jdk8-2.15.4.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.4/jackson-datatype-jsr310-2.15.4.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.4/jackson-module-parameter-names-2.15.4.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.1.12/spring-boot-starter-tomcat-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.24/tomcat-embed-core-10.1.24.jar:/Users/atharvawaranashiwar/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.24/tomcat-embed-websocket-10.1.24.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-web/6.0.21/spring-web-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-beans/6.0.21/spring-beans-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/io/micrometer/micrometer-observation/1.11.12/micrometer-observation-1.11.12.jar:/Users/atharvawaranashiwar/.m2/repository/io/micrometer/micrometer-commons/1.11.12/micrometer-commons-1.11.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-webmvc/6.0.21/spring-webmvc-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-context/6.0.21/spring-context-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-expression/6.0.21/spring-expression-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.1.12/spring-boot-starter-data-jpa-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.1.12/spring-boot-starter-aop-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/aspectj/aspectjweaver/1.9.22/aspectjweaver-1.9.22.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.1.12/spring-boot-starter-jdbc-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-jdbc/6.0.21/spring-jdbc-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/hibernate/orm/hibernate-core/6.2.25.Final/hibernate-core-6.2.25.Final.jar:/Users/atharvawaranashiwar/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/atharvawaranashiwar/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/atharvawaranashiwar/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/Users/atharvawaranashiwar/.m2/repository/io/smallrye/jandex/3.0.5/jandex-3.0.5.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar:/Users/atharvawaranashiwar/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar:/Users/atharvawaranashiwar/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:/Users/atharvawaranashiwar/.m2/repository/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar:/Users/atharvawaranashiwar/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/atharvawaranashiwar/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/antlr/antlr4-runtime/4.10.1/antlr4-runtime-4.10.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/data/spring-data-jpa/3.1.12/spring-data-jpa-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/data/spring-data-commons/3.1.12/spring-data-commons-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-orm/6.0.21/spring-orm-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-tx/6.0.21/spring-tx-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/slf4j/slf4j-api/2.0.13/slf4j-api-2.0.13.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-aspects/6.0.21/spring-aspects-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.1.12/spring-boot-starter-security-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-aop/6.0.21/spring-aop-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/security/spring-security-config/6.1.9/spring-security-config-6.1.9.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/security/spring-security-core/6.1.9/spring-security-core-6.1.9.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/security/spring-security-crypto/6.1.9/spring-security-crypto-6.1.9.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/security/spring-security-web/6.1.9/spring-security-web-6.1.9.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.1.12/spring-boot-starter-validation-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.24/tomcat-embed-el-10.1.24.jar:/Users/atharvawaranashiwar/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/Users/atharvawaranashiwar/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/atharvawaranashiwar/.m2/repository/io/jsonwebtoken/jjwt-api/0.11.5/jjwt-api-0.11.5.jar:/Users/atharvawaranashiwar/.m2/repository/io/jsonwebtoken/jjwt-impl/0.11.5/jjwt-impl-0.11.5.jar:/Users/atharvawaranashiwar/.m2/repository/io/jsonwebtoken/jjwt-jackson/0.11.5/jjwt-jackson-0.11.5.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.4/jackson-databind-2.15.4.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.4/jackson-annotations-2.15.4.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.4/jackson-core-2.15.4.jar:/Users/atharvawaranashiwar/.m2/repository/org/postgresql/postgresql/42.6.2/postgresql-42.6.2.jar:/Users/atharvawaranashiwar/.m2/repository/org/checkerframework/checker-qual/3.31.0/checker-qual-3.31.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/flywaydb/flyway-core/9.16.3/flyway-core-9.16.3.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-toml/2.15.4/jackson-dataformat-toml-2.15.4.jar:/Users/atharvawaranashiwar/.m2/repository/org/apache/commons/commons-text/1.10.0/commons-text-1.10.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/2.2.0/springdoc-openapi-starter-webmvc-ui-2.2.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/2.2.0/springdoc-openapi-starter-webmvc-api-2.2.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/springdoc/springdoc-openapi-starter-common/2.2.0/springdoc-openapi-starter-common-2.2.0.jar:/Users/atharvawaranashiwar/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.15/swagger-core-jakarta-2.2.15.jar:/Users/atharvawaranashiwar/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.15/swagger-annotations-jakarta-2.2.15.jar:/Users/atharvawaranashiwar/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.15/swagger-models-jakarta-2.2.15.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.15.4/jackson-dataformat-yaml-2.15.4.jar:/Users/atharvawaranashiwar/.m2/repository/org/webjars/swagger-ui/5.2.0/swagger-ui-5.2.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/projectlombok/lombok/1.18.32/lombok-1.18.32.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.1.12/spring-boot-starter-test-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-test/3.1.12/spring-boot-test-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.1.12/spring-boot-test-autoconfigure-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/Users/atharvawaranashiwar/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/Users/atharvawaranashiwar/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/Users/atharvawaranashiwar/.m2/repository/net/minidev/json-smart/2.4.11/json-smart-2.4.11.jar:/Users/atharvawaranashiwar/.m2/repository/net/minidev/accessors-smart/2.4.11/accessors-smart-2.4.11.jar:/Users/atharvawaranashiwar/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/atharvawaranashiwar/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/atharvawaranashiwar/.m2/repository/org/junit/jupiter/junit-jupiter/5.9.3/junit-jupiter-5.9.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.3/junit-jupiter-api-5.9.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/junit/platform/junit-platform-commons/1.9.3/junit-platform-commons-1.9.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/atharvawaranashiwar/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.3/junit-jupiter-params-5.9.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.3/junit-jupiter-engine-5.9.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/junit/platform/junit-platform-engine/1.9.3/junit-platform-engine-1.9.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/mockito/mockito-junit-jupiter/5.3.1/mockito-junit-jupiter-5.3.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/atharvawaranashiwar/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-core/6.0.21/spring-core-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-jcl/6.0.21/spring-jcl-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-test/6.0.21/spring-test-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/testcontainers/junit-jupiter/1.18.3/junit-jupiter-1.18.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/testcontainers/testcontainers/1.18.3/testcontainers-1.18.3.jar:/Users/atharvawaranashiwar/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/atharvawaranashiwar/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/Users/atharvawaranashiwar/.m2/repository/org/apache/commons/commons-compress/1.23.0/commons-compress-1.23.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/rnorth/duct-tape/duct-tape/1.0.8/duct-tape-1.0.8.jar:/Users/atharvawaranashiwar/.m2/repository/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar:/Users/atharvawaranashiwar/.m2/repository/com/github/docker-java/docker-java-api/3.3.0/docker-java-api-3.3.0.jar:/Users/atharvawaranashiwar/.m2/repository/com/github/docker-java/docker-java-transport-zerodep/3.3.0/docker-java-transport-zerodep-3.3.0.jar:/Users/atharvawaranashiwar/.m2/repository/com/github/docker-java/docker-java-transport/3.3.0/docker-java-transport-3.3.0.jar:/Users/atharvawaranashiwar/.m2/repository/net/java/dev/jna/jna/5.12.1/jna-5.12.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/testcontainers/postgresql/1.18.3/postgresql-1.18.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/testcontainers/jdbc/1.18.3/jdbc-1.18.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/testcontainers/database-commons/1.18.3/database-commons-1.18.3.jar:/Users/atharvawaranashiwar/.m2/repository/com/h2database/h2/2.1.214/h2-2.1.214.jar:/Users/atharvawaranashiwar/.m2/repository/org/mockito/mockito-core/5.3.1/mockito-core-5.3.1.jar:/Users/atharvawaranashiwar/.m2/repository/net/bytebuddy/byte-buddy/1.14.16/byte-buddy-1.14.16.jar:/Users/atharvawaranashiwar/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.16/byte-buddy-agent-1.14.16.jar:/Users/atharvawaranashiwar/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:"/>
     <property name="java.vm.vendor" value="Homebrew"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
@@ -14,10 +14,10 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/25.0.2/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/atharvawaranashiwar/Documents/Projects/Job_Application_Tracker/backend/target/surefire/surefirebooter-20260316212233038_3.jar /Users/atharvawaranashiwar/Documents/Projects/Job_Application_Tracker/backend/target/surefire 2026-03-16T21-22-33_002-jvmRun1 surefire-20260316212233038_1tmp surefire_0-20260316212233038_2tmp"/>
+    <property name="sun.java.command" value="/Users/atharvawaranashiwar/Documents/Projects/Job_Application_Tracker/backend/target/surefire/surefirebooter-20260316232059409_3.jar /Users/atharvawaranashiwar/Documents/Projects/Job_Application_Tracker/backend/target/surefire 2026-03-16T23-20-59_356-jvmRun1 surefire-20260316232059409_1tmp surefire_0-20260316232059409_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="/Users/atharvawaranashiwar/Documents/Projects/Job_Application_Tracker/backend/target/test-classes:/Users/atharvawaranashiwar/Documents/Projects/Job_Application_Tracker/backend/target/classes:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.1.12/spring-boot-starter-web-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter/3.1.12/spring-boot-starter-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot/3.1.12/spring-boot-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.1.12/spring-boot-autoconfigure-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.1.12/spring-boot-starter-logging-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/ch/qos/logback/logback-classic/1.4.14/logback-classic-1.4.14.jar:/Users/atharvawaranashiwar/.m2/repository/ch/qos/logback/logback-core/1.4.14/logback-core-1.4.14.jar:/Users/atharvawaranashiwar/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.20.0/log4j-to-slf4j-2.20.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/slf4j/jul-to-slf4j/2.0.13/jul-to-slf4j-2.0.13.jar:/Users/atharvawaranashiwar/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/yaml/snakeyaml/1.33/snakeyaml-1.33.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.1.12/spring-boot-starter-json-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.4/jackson-datatype-jdk8-2.15.4.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.4/jackson-datatype-jsr310-2.15.4.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.4/jackson-module-parameter-names-2.15.4.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.1.12/spring-boot-starter-tomcat-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.24/tomcat-embed-core-10.1.24.jar:/Users/atharvawaranashiwar/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.24/tomcat-embed-websocket-10.1.24.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-web/6.0.21/spring-web-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-beans/6.0.21/spring-beans-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/io/micrometer/micrometer-observation/1.11.12/micrometer-observation-1.11.12.jar:/Users/atharvawaranashiwar/.m2/repository/io/micrometer/micrometer-commons/1.11.12/micrometer-commons-1.11.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-webmvc/6.0.21/spring-webmvc-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-context/6.0.21/spring-context-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-expression/6.0.21/spring-expression-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.1.12/spring-boot-starter-data-jpa-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.1.12/spring-boot-starter-aop-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/aspectj/aspectjweaver/1.9.22/aspectjweaver-1.9.22.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.1.12/spring-boot-starter-jdbc-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-jdbc/6.0.21/spring-jdbc-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/hibernate/orm/hibernate-core/6.2.25.Final/hibernate-core-6.2.25.Final.jar:/Users/atharvawaranashiwar/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/atharvawaranashiwar/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/atharvawaranashiwar/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/Users/atharvawaranashiwar/.m2/repository/io/smallrye/jandex/3.0.5/jandex-3.0.5.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar:/Users/atharvawaranashiwar/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar:/Users/atharvawaranashiwar/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:/Users/atharvawaranashiwar/.m2/repository/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar:/Users/atharvawaranashiwar/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/atharvawaranashiwar/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/antlr/antlr4-runtime/4.10.1/antlr4-runtime-4.10.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/data/spring-data-jpa/3.1.12/spring-data-jpa-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/data/spring-data-commons/3.1.12/spring-data-commons-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-orm/6.0.21/spring-orm-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-tx/6.0.21/spring-tx-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/slf4j/slf4j-api/2.0.13/slf4j-api-2.0.13.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-aspects/6.0.21/spring-aspects-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.1.12/spring-boot-starter-security-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-aop/6.0.21/spring-aop-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/security/spring-security-config/6.1.9/spring-security-config-6.1.9.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/security/spring-security-core/6.1.9/spring-security-core-6.1.9.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/security/spring-security-crypto/6.1.9/spring-security-crypto-6.1.9.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/security/spring-security-web/6.1.9/spring-security-web-6.1.9.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.1.12/spring-boot-starter-validation-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.24/tomcat-embed-el-10.1.24.jar:/Users/atharvawaranashiwar/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/Users/atharvawaranashiwar/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/atharvawaranashiwar/.m2/repository/io/jsonwebtoken/jjwt-api/0.11.5/jjwt-api-0.11.5.jar:/Users/atharvawaranashiwar/.m2/repository/io/jsonwebtoken/jjwt-impl/0.11.5/jjwt-impl-0.11.5.jar:/Users/atharvawaranashiwar/.m2/repository/io/jsonwebtoken/jjwt-jackson/0.11.5/jjwt-jackson-0.11.5.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.4/jackson-databind-2.15.4.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.4/jackson-annotations-2.15.4.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.4/jackson-core-2.15.4.jar:/Users/atharvawaranashiwar/.m2/repository/org/postgresql/postgresql/42.6.2/postgresql-42.6.2.jar:/Users/atharvawaranashiwar/.m2/repository/org/checkerframework/checker-qual/3.31.0/checker-qual-3.31.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/flywaydb/flyway-core/9.16.3/flyway-core-9.16.3.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-toml/2.15.4/jackson-dataformat-toml-2.15.4.jar:/Users/atharvawaranashiwar/.m2/repository/org/apache/commons/commons-text/1.10.0/commons-text-1.10.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/2.2.0/springdoc-openapi-starter-webmvc-ui-2.2.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/2.2.0/springdoc-openapi-starter-webmvc-api-2.2.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/springdoc/springdoc-openapi-starter-common/2.2.0/springdoc-openapi-starter-common-2.2.0.jar:/Users/atharvawaranashiwar/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.15/swagger-core-jakarta-2.2.15.jar:/Users/atharvawaranashiwar/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.15/swagger-annotations-jakarta-2.2.15.jar:/Users/atharvawaranashiwar/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.15/swagger-models-jakarta-2.2.15.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.15.4/jackson-dataformat-yaml-2.15.4.jar:/Users/atharvawaranashiwar/.m2/repository/org/webjars/swagger-ui/5.2.0/swagger-ui-5.2.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/projectlombok/lombok/1.18.32/lombok-1.18.32.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.1.12/spring-boot-starter-test-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-test/3.1.12/spring-boot-test-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.1.12/spring-boot-test-autoconfigure-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/Users/atharvawaranashiwar/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/Users/atharvawaranashiwar/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/Users/atharvawaranashiwar/.m2/repository/net/minidev/json-smart/2.4.11/json-smart-2.4.11.jar:/Users/atharvawaranashiwar/.m2/repository/net/minidev/accessors-smart/2.4.11/accessors-smart-2.4.11.jar:/Users/atharvawaranashiwar/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/atharvawaranashiwar/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/atharvawaranashiwar/.m2/repository/org/junit/jupiter/junit-jupiter/5.9.3/junit-jupiter-5.9.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.3/junit-jupiter-api-5.9.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/junit/platform/junit-platform-commons/1.9.3/junit-platform-commons-1.9.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/atharvawaranashiwar/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.3/junit-jupiter-params-5.9.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.3/junit-jupiter-engine-5.9.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/junit/platform/junit-platform-engine/1.9.3/junit-platform-engine-1.9.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/mockito/mockito-junit-jupiter/5.3.1/mockito-junit-jupiter-5.3.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/atharvawaranashiwar/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-core/6.0.21/spring-core-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-jcl/6.0.21/spring-jcl-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-test/6.0.21/spring-test-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/testcontainers/junit-jupiter/1.18.3/junit-jupiter-1.18.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/testcontainers/testcontainers/1.18.3/testcontainers-1.18.3.jar:/Users/atharvawaranashiwar/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/atharvawaranashiwar/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/Users/atharvawaranashiwar/.m2/repository/org/apache/commons/commons-compress/1.23.0/commons-compress-1.23.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/rnorth/duct-tape/duct-tape/1.0.8/duct-tape-1.0.8.jar:/Users/atharvawaranashiwar/.m2/repository/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar:/Users/atharvawaranashiwar/.m2/repository/com/github/docker-java/docker-java-api/3.3.0/docker-java-api-3.3.0.jar:/Users/atharvawaranashiwar/.m2/repository/com/github/docker-java/docker-java-transport-zerodep/3.3.0/docker-java-transport-zerodep-3.3.0.jar:/Users/atharvawaranashiwar/.m2/repository/com/github/docker-java/docker-java-transport/3.3.0/docker-java-transport-3.3.0.jar:/Users/atharvawaranashiwar/.m2/repository/net/java/dev/jna/jna/5.12.1/jna-5.12.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/testcontainers/postgresql/1.18.3/postgresql-1.18.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/testcontainers/jdbc/1.18.3/jdbc-1.18.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/testcontainers/database-commons/1.18.3/database-commons-1.18.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/mockito/mockito-core/5.3.1/mockito-core-5.3.1.jar:/Users/atharvawaranashiwar/.m2/repository/net/bytebuddy/byte-buddy/1.14.16/byte-buddy-1.14.16.jar:/Users/atharvawaranashiwar/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.16/byte-buddy-agent-1.14.16.jar:/Users/atharvawaranashiwar/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:"/>
+    <property name="surefire.test.class.path" value="/Users/atharvawaranashiwar/Documents/Projects/Job_Application_Tracker/backend/target/test-classes:/Users/atharvawaranashiwar/Documents/Projects/Job_Application_Tracker/backend/target/classes:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.1.12/spring-boot-starter-web-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter/3.1.12/spring-boot-starter-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot/3.1.12/spring-boot-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.1.12/spring-boot-autoconfigure-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.1.12/spring-boot-starter-logging-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/ch/qos/logback/logback-classic/1.4.14/logback-classic-1.4.14.jar:/Users/atharvawaranashiwar/.m2/repository/ch/qos/logback/logback-core/1.4.14/logback-core-1.4.14.jar:/Users/atharvawaranashiwar/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.20.0/log4j-to-slf4j-2.20.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/apache/logging/log4j/log4j-api/2.20.0/log4j-api-2.20.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/slf4j/jul-to-slf4j/2.0.13/jul-to-slf4j-2.0.13.jar:/Users/atharvawaranashiwar/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/yaml/snakeyaml/1.33/snakeyaml-1.33.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.1.12/spring-boot-starter-json-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.15.4/jackson-datatype-jdk8-2.15.4.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.15.4/jackson-datatype-jsr310-2.15.4.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.15.4/jackson-module-parameter-names-2.15.4.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.1.12/spring-boot-starter-tomcat-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.24/tomcat-embed-core-10.1.24.jar:/Users/atharvawaranashiwar/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.24/tomcat-embed-websocket-10.1.24.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-web/6.0.21/spring-web-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-beans/6.0.21/spring-beans-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/io/micrometer/micrometer-observation/1.11.12/micrometer-observation-1.11.12.jar:/Users/atharvawaranashiwar/.m2/repository/io/micrometer/micrometer-commons/1.11.12/micrometer-commons-1.11.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-webmvc/6.0.21/spring-webmvc-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-context/6.0.21/spring-context-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-expression/6.0.21/spring-expression-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.1.12/spring-boot-starter-data-jpa-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-aop/3.1.12/spring-boot-starter-aop-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/aspectj/aspectjweaver/1.9.22/aspectjweaver-1.9.22.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.1.12/spring-boot-starter-jdbc-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/com/zaxxer/HikariCP/5.0.1/HikariCP-5.0.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-jdbc/6.0.21/spring-jdbc-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/hibernate/orm/hibernate-core/6.2.25.Final/hibernate-core-6.2.25.Final.jar:/Users/atharvawaranashiwar/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar:/Users/atharvawaranashiwar/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/Users/atharvawaranashiwar/.m2/repository/org/hibernate/common/hibernate-commons-annotations/6.0.6.Final/hibernate-commons-annotations-6.0.6.Final.jar:/Users/atharvawaranashiwar/.m2/repository/io/smallrye/jandex/3.0.5/jandex-3.0.5.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/glassfish/jaxb/jaxb-runtime/4.0.5/jaxb-runtime-4.0.5.jar:/Users/atharvawaranashiwar/.m2/repository/org/glassfish/jaxb/jaxb-core/4.0.5/jaxb-core-4.0.5.jar:/Users/atharvawaranashiwar/.m2/repository/org/eclipse/angus/angus-activation/2.0.2/angus-activation-2.0.2.jar:/Users/atharvawaranashiwar/.m2/repository/org/glassfish/jaxb/txw2/4.0.5/txw2-4.0.5.jar:/Users/atharvawaranashiwar/.m2/repository/com/sun/istack/istack-commons-runtime/4.1.2/istack-commons-runtime-4.1.2.jar:/Users/atharvawaranashiwar/.m2/repository/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/antlr/antlr4-runtime/4.10.1/antlr4-runtime-4.10.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/data/spring-data-jpa/3.1.12/spring-data-jpa-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/data/spring-data-commons/3.1.12/spring-data-commons-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-orm/6.0.21/spring-orm-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-tx/6.0.21/spring-tx-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/slf4j/slf4j-api/2.0.13/slf4j-api-2.0.13.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-aspects/6.0.21/spring-aspects-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.1.12/spring-boot-starter-security-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-aop/6.0.21/spring-aop-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/security/spring-security-config/6.1.9/spring-security-config-6.1.9.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/security/spring-security-core/6.1.9/spring-security-core-6.1.9.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/security/spring-security-crypto/6.1.9/spring-security-crypto-6.1.9.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/security/spring-security-web/6.1.9/spring-security-web-6.1.9.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.1.12/spring-boot-starter-validation-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.24/tomcat-embed-el-10.1.24.jar:/Users/atharvawaranashiwar/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/Users/atharvawaranashiwar/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/Users/atharvawaranashiwar/.m2/repository/io/jsonwebtoken/jjwt-api/0.11.5/jjwt-api-0.11.5.jar:/Users/atharvawaranashiwar/.m2/repository/io/jsonwebtoken/jjwt-impl/0.11.5/jjwt-impl-0.11.5.jar:/Users/atharvawaranashiwar/.m2/repository/io/jsonwebtoken/jjwt-jackson/0.11.5/jjwt-jackson-0.11.5.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.4/jackson-databind-2.15.4.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.4/jackson-annotations-2.15.4.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.4/jackson-core-2.15.4.jar:/Users/atharvawaranashiwar/.m2/repository/org/postgresql/postgresql/42.6.2/postgresql-42.6.2.jar:/Users/atharvawaranashiwar/.m2/repository/org/checkerframework/checker-qual/3.31.0/checker-qual-3.31.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/flywaydb/flyway-core/9.16.3/flyway-core-9.16.3.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-toml/2.15.4/jackson-dataformat-toml-2.15.4.jar:/Users/atharvawaranashiwar/.m2/repository/org/apache/commons/commons-text/1.10.0/commons-text-1.10.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/apache/commons/commons-lang3/3.12.0/commons-lang3-3.12.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-ui/2.2.0/springdoc-openapi-starter-webmvc-ui-2.2.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/springdoc/springdoc-openapi-starter-webmvc-api/2.2.0/springdoc-openapi-starter-webmvc-api-2.2.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/springdoc/springdoc-openapi-starter-common/2.2.0/springdoc-openapi-starter-common-2.2.0.jar:/Users/atharvawaranashiwar/.m2/repository/io/swagger/core/v3/swagger-core-jakarta/2.2.15/swagger-core-jakarta-2.2.15.jar:/Users/atharvawaranashiwar/.m2/repository/io/swagger/core/v3/swagger-annotations-jakarta/2.2.15/swagger-annotations-jakarta-2.2.15.jar:/Users/atharvawaranashiwar/.m2/repository/io/swagger/core/v3/swagger-models-jakarta/2.2.15/swagger-models-jakarta-2.2.15.jar:/Users/atharvawaranashiwar/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-yaml/2.15.4/jackson-dataformat-yaml-2.15.4.jar:/Users/atharvawaranashiwar/.m2/repository/org/webjars/swagger-ui/5.2.0/swagger-ui-5.2.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/projectlombok/lombok/1.18.32/lombok-1.18.32.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.1.12/spring-boot-starter-test-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-test/3.1.12/spring-boot-test-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.1.12/spring-boot-test-autoconfigure-3.1.12.jar:/Users/atharvawaranashiwar/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/Users/atharvawaranashiwar/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/Users/atharvawaranashiwar/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/Users/atharvawaranashiwar/.m2/repository/net/minidev/json-smart/2.4.11/json-smart-2.4.11.jar:/Users/atharvawaranashiwar/.m2/repository/net/minidev/accessors-smart/2.4.11/accessors-smart-2.4.11.jar:/Users/atharvawaranashiwar/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/assertj/assertj-core/3.24.2/assertj-core-3.24.2.jar:/Users/atharvawaranashiwar/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/Users/atharvawaranashiwar/.m2/repository/org/junit/jupiter/junit-jupiter/5.9.3/junit-jupiter-5.9.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.3/junit-jupiter-api-5.9.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/junit/platform/junit-platform-commons/1.9.3/junit-platform-commons-1.9.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/atharvawaranashiwar/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.3/junit-jupiter-params-5.9.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.3/junit-jupiter-engine-5.9.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/junit/platform/junit-platform-engine/1.9.3/junit-platform-engine-1.9.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/mockito/mockito-junit-jupiter/5.3.1/mockito-junit-jupiter-5.3.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/skyscreamer/jsonassert/1.5.1/jsonassert-1.5.1.jar:/Users/atharvawaranashiwar/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-core/6.0.21/spring-core-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-jcl/6.0.21/spring-jcl-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/springframework/spring-test/6.0.21/spring-test-6.0.21.jar:/Users/atharvawaranashiwar/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/testcontainers/junit-jupiter/1.18.3/junit-jupiter-1.18.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/testcontainers/testcontainers/1.18.3/testcontainers-1.18.3.jar:/Users/atharvawaranashiwar/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar:/Users/atharvawaranashiwar/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar:/Users/atharvawaranashiwar/.m2/repository/org/apache/commons/commons-compress/1.23.0/commons-compress-1.23.0.jar:/Users/atharvawaranashiwar/.m2/repository/org/rnorth/duct-tape/duct-tape/1.0.8/duct-tape-1.0.8.jar:/Users/atharvawaranashiwar/.m2/repository/org/jetbrains/annotations/17.0.0/annotations-17.0.0.jar:/Users/atharvawaranashiwar/.m2/repository/com/github/docker-java/docker-java-api/3.3.0/docker-java-api-3.3.0.jar:/Users/atharvawaranashiwar/.m2/repository/com/github/docker-java/docker-java-transport-zerodep/3.3.0/docker-java-transport-zerodep-3.3.0.jar:/Users/atharvawaranashiwar/.m2/repository/com/github/docker-java/docker-java-transport/3.3.0/docker-java-transport-3.3.0.jar:/Users/atharvawaranashiwar/.m2/repository/net/java/dev/jna/jna/5.12.1/jna-5.12.1.jar:/Users/atharvawaranashiwar/.m2/repository/org/testcontainers/postgresql/1.18.3/postgresql-1.18.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/testcontainers/jdbc/1.18.3/jdbc-1.18.3.jar:/Users/atharvawaranashiwar/.m2/repository/org/testcontainers/database-commons/1.18.3/database-commons-1.18.3.jar:/Users/atharvawaranashiwar/.m2/repository/com/h2database/h2/2.1.214/h2-2.1.214.jar:/Users/atharvawaranashiwar/.m2/repository/org/mockito/mockito-core/5.3.1/mockito-core-5.3.1.jar:/Users/atharvawaranashiwar/.m2/repository/net/bytebuddy/byte-buddy/1.14.16/byte-buddy-1.14.16.jar:/Users/atharvawaranashiwar/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.16/byte-buddy-agent-1.14.16.jar:/Users/atharvawaranashiwar/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/Users/atharvawaranashiwar"/>
     <property name="user.language" value="en"/>
@@ -33,7 +33,7 @@
     <property name="FILE_LOG_CHARSET" value="UTF-8"/>
     <property name="java.awt.headless" value="true"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/atharvawaranashiwar/Documents/Projects/Job_Application_Tracker/backend/target/surefire/surefirebooter-20260316212233038_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/atharvawaranashiwar/Documents/Projects/Job_Application_Tracker/backend/target/surefire/surefirebooter-20260316232059409_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="25.0.2"/>
@@ -53,7 +53,7 @@
     <property name="user.dir" value="/Users/atharvawaranashiwar/Documents/Projects/Job_Application_Tracker/backend"/>
     <property name="os.arch" value="aarch64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="PID" value="98909"/>
+    <property name="PID" value="68838"/>
     <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
     <property name="native.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/Users/atharvawaranashiwar/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
@@ -66,9 +66,9 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="69.0"/>
   </properties>
-  <testcase name="createAndListApplications" classname="com.example.jobtracker.ApplicationIntegrationTest" time="0.574">
-    <system-out><![CDATA[21:22:33.378 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.jobtracker.ApplicationIntegrationTest]: ApplicationIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-21:22:33.428 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.jobtracker.JobTrackerApplication for test class com.example.jobtracker.ApplicationIntegrationTest
+  <testcase name="createAndListApplications" classname="com.example.jobtracker.ApplicationIntegrationTest" time="0.57">
+    <system-out><![CDATA[23:20:59.682 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.jobtracker.ApplicationIntegrationTest]: ApplicationIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+23:20:59.729 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.jobtracker.JobTrackerApplication for test class com.example.jobtracker.ApplicationIntegrationTest
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -78,41 +78,306 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::               (v3.1.12)
 
-2026-03-16T21:22:33.587-04:00  INFO 98909 --- [           main] c.e.j.ApplicationIntegrationTest         : Starting ApplicationIntegrationTest using Java 25.0.2 with PID 98909 (started by atharvawaranashiwar in /Users/atharvawaranashiwar/Documents/Projects/Job_Application_Tracker/backend)
-2026-03-16T21:22:33.587-04:00  INFO 98909 --- [           main] c.e.j.ApplicationIntegrationTest         : No active profile set, falling back to 1 default profile: "default"
-2026-03-16T21:22:33.587-04:00 DEBUG 98909 --- [           main] o.s.boot.SpringApplication               : Loading source class com.example.jobtracker.JobTrackerApplication
-2026-03-16T21:22:33.602-04:00 DEBUG 98909 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@c8b96ec
-2026-03-16T21:22:33.887-04:00  INFO 98909 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-03-16T21:22:33.893-04:00 DEBUG 98909 --- [           main] o.s.b.a.AutoConfigurationPackages        : @EnableAutoConfiguration was declared on a class in the package 'com.example.jobtracker'. Automatic @Repository and @Entity scanning is enabled.
-2026-03-16T21:22:33.910-04:00  INFO 98909 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 4 JPA repository interfaces.
-2026-03-16T21:22:34.116-04:00  INFO 98909 --- [           main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.16.3 by Redgate
-2026-03-16T21:22:34.116-04:00  INFO 98909 --- [           main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
-2026-03-16T21:22:34.116-04:00  INFO 98909 --- [           main] o.f.c.internal.license.VersionPrinter    : 
-2026-03-16T21:22:34.119-04:00  INFO 98909 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-03-16T21:22:34.216-04:00  INFO 98909 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@689faf79
-2026-03-16T21:22:34.219-04:00  INFO 98909 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-03-16T21:22:34.229-04:00  INFO 98909 --- [           main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:5432/job_tracker (PostgreSQL 15.17)
-2026-03-16T21:22:34.252-04:00  INFO 98909 --- [           main] o.f.core.internal.command.DbValidate     : Successfully validated 3 migrations (execution time 00:00.010s)
-2026-03-16T21:22:34.288-04:00  INFO 98909 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema "public": 3
-2026-03-16T21:22:34.288-04:00  INFO 98909 --- [           main] o.f.core.internal.command.DbMigrate      : Schema "public" is up to date. No migration necessary.
-2026-03-16T21:22:34.340-04:00  INFO 98909 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-03-16T21:22:34.362-04:00  INFO 98909 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.25.Final
-2026-03-16T21:22:34.363-04:00  INFO 98909 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
-2026-03-16T21:22:34.458-04:00  INFO 98909 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-03-16T21:22:34.785-04:00  INFO 98909 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-03-16T21:22:34.786-04:00  INFO 98909 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-03-16T21:22:34.868-04:00  WARN 98909 --- [           main] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.example.jobtracker.repository.ActivityLogRepository
-2026-03-16T21:22:34.910-04:00  WARN 98909 --- [           main] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.example.jobtracker.repository.UserRepository
-2026-03-16T21:22:34.921-04:00  WARN 98909 --- [           main] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.example.jobtracker.repository.ApplicationRepository
-2026-03-16T21:22:34.930-04:00  WARN 98909 --- [           main] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.example.jobtracker.repository.PasswordResetTokenRepository
-2026-03-16T21:22:34.938-04:00  WARN 98909 --- [           main] c.e.j.security.JwtTokenProvider          : JWT secret is not securely configured. Generating an ephemeral secret for this runtime.
-2026-03-16T21:22:35.000-04:00  WARN 98909 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-03-16T21:22:35.050-04:00 DEBUG 98909 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 21 mappings in 'requestMappingHandlerMapping'
-2026-03-16T21:22:35.095-04:00 DEBUG 98909 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
-2026-03-16T21:22:35.117-04:00  INFO 98909 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3b6c55b6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@55e02661, org.springframework.security.web.context.SecurityContextHolderFilter@78d52d4c, org.springframework.security.web.header.HeaderWriterFilter@6a7cbeed, org.springframework.web.filter.CorsFilter@7f38545a, org.springframework.security.web.authentication.logout.LogoutFilter@4ccf1d3e, com.example.jobtracker.security.JwtAuthenticationFilter@549be307, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@34907a49, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1ae26c59, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@d03cdc7, org.springframework.security.web.session.SessionManagementFilter@4a76c90, org.springframework.security.web.access.ExceptionTranslationFilter@65852d05, org.springframework.security.web.access.intercept.AuthorizationFilter@55d776ac]
-2026-03-16T21:22:35.181-04:00 DEBUG 98909 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2026-03-16T21:22:35.193-04:00 DEBUG 98909 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
-2026-03-16T21:22:35.254-04:00 DEBUG 98909 --- [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2026-03-16T23:20:59.864-04:00  INFO 68838 --- [           main] c.e.j.ApplicationIntegrationTest         : Starting ApplicationIntegrationTest using Java 25.0.2 with PID 68838 (started by atharvawaranashiwar in /Users/atharvawaranashiwar/Documents/Projects/Job_Application_Tracker/backend)
+2026-03-16T23:20:59.865-04:00  INFO 68838 --- [           main] c.e.j.ApplicationIntegrationTest         : The following 1 profile is active: "test"
+2026-03-16T23:20:59.865-04:00 DEBUG 68838 --- [           main] o.s.boot.SpringApplication               : Loading source class com.example.jobtracker.JobTrackerApplication
+2026-03-16T23:20:59.873-04:00 DEBUG 68838 --- [           main] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@182b435b
+2026-03-16T23:21:00.124-04:00  INFO 68838 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-16T23:21:00.129-04:00 DEBUG 68838 --- [           main] o.s.b.a.AutoConfigurationPackages        : @EnableAutoConfiguration was declared on a class in the package 'com.example.jobtracker'. Automatic @Repository and @Entity scanning is enabled.
+2026-03-16T23:21:00.159-04:00  INFO 68838 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 12 JPA repository interfaces.
+2026-03-16T23:21:00.383-04:00  INFO 68838 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-16T23:21:00.407-04:00  INFO 68838 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.2.25.Final
+2026-03-16T23:21:00.408-04:00  INFO 68838 --- [           main] org.hibernate.cfg.Environment            : HHH000406: Using bytecode reflection optimizer
+2026-03-16T23:21:00.511-04:00  INFO 68838 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-16T23:21:00.521-04:00  INFO 68838 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-16T23:21:00.588-04:00  INFO 68838 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2026-03-16T23:21:00.589-04:00  INFO 68838 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-16T23:21:00.600-04:00  WARN 68838 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-16T23:21:00.957-04:00  INFO 68838 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-16T23:21:00.961-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    drop table if exists activity_log cascade 
+2026-03-16T23:21:00.962-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    drop table if exists application_contacts cascade 
+2026-03-16T23:21:00.963-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    drop table if exists application_documents cascade 
+2026-03-16T23:21:00.963-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    drop table if exists application_notes cascade 
+2026-03-16T23:21:00.963-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    drop table if exists application_stage_history cascade 
+2026-03-16T23:21:00.963-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    drop table if exists application_stages cascade 
+2026-03-16T23:21:00.963-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    drop table if exists applications cascade 
+2026-03-16T23:21:00.963-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    drop table if exists interview_rounds cascade 
+2026-03-16T23:21:00.963-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    drop table if exists offers cascade 
+2026-03-16T23:21:00.964-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    drop table if exists password_reset_tokens cascade 
+2026-03-16T23:21:00.964-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    drop table if exists reminders cascade 
+2026-03-16T23:21:00.964-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    drop table if exists users cascade 
+2026-03-16T23:21:00.966-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    create table activity_log (
+        application_id bigint,
+        created_at timestamp(6) with time zone not null,
+        id bigint generated by default as identity,
+        user_id bigint not null,
+        action varchar(100) not null,
+        details text,
+        primary key (id)
+    )
+2026-03-16T23:21:00.969-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    create table application_contacts (
+        outreach_date date,
+        referral_received boolean not null,
+        referral_requested boolean not null,
+        application_id bigint not null,
+        created_at timestamp(6) with time zone not null,
+        id bigint generated by default as identity,
+        updated_at timestamp(6) with time zone not null,
+        recruiter_name varchar(200),
+        referral_contact_name varchar(200),
+        follow_up_notes text,
+        recruiter_email varchar(255),
+        referral_contact_email varchar(255),
+        primary key (id)
+    )
+2026-03-16T23:21:00.969-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    create table application_documents (
+        application_id bigint not null,
+        id bigint generated by default as identity,
+        updated_at timestamp(6) with time zone not null,
+        cover_letter_version varchar(100),
+        resume_version varchar(100),
+        cover_letter_ref varchar(1000),
+        github_url varchar(1000),
+        linkedin_url varchar(1000),
+        portfolio_ref varchar(1000),
+        resume_ref varchar(1000),
+        primary key (id)
+    )
+2026-03-16T23:21:00.970-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    create table application_notes (
+        application_id bigint not null,
+        id bigint generated by default as identity,
+        updated_at timestamp(6) with time zone not null,
+        category varchar(50) not null check (category in ('COMPANY_RESEARCH','RECRUITER_NOTES','INTERVIEW_PREP','BEHAVIORAL_STORIES','WHY_THIS_COMPANY','MISCELLANEOUS')),
+        content text,
+        primary key (id)
+    )
+2026-03-16T23:21:00.971-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    create table application_stage_history (
+        application_id bigint not null,
+        changed_at timestamp(6) with time zone not null,
+        from_stage_id bigint,
+        id bigint generated by default as identity,
+        to_stage_id bigint not null,
+        reason varchar(255),
+        primary key (id)
+    )
+2026-03-16T23:21:00.972-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    create table application_stages (
+        display_order integer not null,
+        is_archived boolean not null,
+        is_terminal_rejection boolean not null,
+        is_terminal_success boolean not null,
+        created_at timestamp(6) with time zone not null,
+        id bigint generated by default as identity,
+        updated_at timestamp(6) with time zone not null,
+        user_id bigint not null,
+        color_hex varchar(20) not null,
+        name varchar(100) not null,
+        primary key (id)
+    )
+2026-03-16T23:21:00.973-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    create table applications (
+        application_deadline date,
+        applied_at date,
+        sponsorship_available boolean,
+        deleted_at timestamp(6) with time zone,
+        id bigint generated by default as identity,
+        stage_entered_at timestamp(6) with time zone not null,
+        stage_id bigint not null,
+        updated_at timestamp(6) with time zone not null,
+        user_id bigint not null,
+        priority varchar(20) not null check (priority in ('LOW','MEDIUM','HIGH')),
+        employment_type varchar(50) check (employment_type in ('FULL_TIME','PART_TIME','CONTRACT','INTERN','TEMPORARY')),
+        work_mode varchar(50) check (work_mode in ('REMOTE','HYBRID','ONSITE')),
+        application_source varchar(100),
+        salary_range varchar(100),
+        posting_url varchar(1000),
+        source_url varchar(1000),
+        company varchar(255) not null,
+        job_description text,
+        location varchar(255),
+        notes text,
+        role varchar(255) not null,
+        primary key (id)
+    )
+2026-03-16T23:21:00.973-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    create table interview_rounds (
+        application_id bigint not null,
+        created_at timestamp(6) with time zone not null,
+        id bigint generated by default as identity,
+        scheduled_at timestamp(6) with time zone not null,
+        updated_at timestamp(6) with time zone not null,
+        result_status varchar(50) not null check (result_status in ('SCHEDULED','COMPLETED','PASSED','FAILED','CANCELLED','NO_SHOW')),
+        round_type varchar(50) not null check (round_type in ('PHONE_SCREEN','RECRUITER','TECHNICAL','MANAGER','ONSITE','OA','HR','OTHER')),
+        round_name varchar(100) not null,
+        feedback text,
+        interviewer_name varchar(255),
+        notes text,
+        primary key (id)
+    )
+2026-03-16T23:21:00.974-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    create table offers (
+        base_salary numeric(12,2),
+        bonus numeric(12,2),
+        equity numeric(12,2),
+        offer_date date,
+        response_deadline date,
+        application_id bigint not null,
+        created_at timestamp(6) with time zone not null,
+        id bigint generated by default as identity,
+        updated_at timestamp(6) with time zone not null,
+        currency varchar(10) not null,
+        decision_status varchar(50) not null check (decision_status in ('PENDING','ACCEPTED','REJECTED','NEGOTIATING','EXPIRED')),
+        location varchar(255),
+        notes text,
+        primary key (id)
+    )
+2026-03-16T23:21:00.975-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    create table password_reset_tokens (
+        used boolean not null,
+        expires_at timestamp(6) with time zone not null,
+        id bigint generated by default as identity,
+        token varchar(255) not null unique,
+        username varchar(255) not null,
+        primary key (id)
+    )
+2026-03-16T23:21:00.976-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    create table reminders (
+        application_id bigint,
+        created_at timestamp(6) with time zone not null,
+        due_at timestamp(6) with time zone not null,
+        id bigint generated by default as identity,
+        updated_at timestamp(6) with time zone not null,
+        user_id bigint not null,
+        reminder_type varchar(50) not null check (reminder_type in ('FOLLOW_UP','INTERVIEW_PREP','DEADLINE','CUSTOM')),
+        status varchar(50) not null check (status in ('PENDING','COMPLETED','DISMISSED')),
+        title varchar(200) not null,
+        description text,
+        primary key (id)
+    )
+2026-03-16T23:21:00.977-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    create table users (
+        created_at timestamp(6) with time zone not null,
+        id bigint generated by default as identity,
+        role varchar(50) not null,
+        username varchar(100) not null unique,
+        display_name varchar(200) not null,
+        password_hash varchar(255) not null,
+        primary key (id)
+    )
+2026-03-16T23:21:00.978-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    alter table if exists activity_log 
+       add constraint FK5f97p0jymg930palus8ai09vd 
+       foreign key (application_id) 
+       references applications
+2026-03-16T23:21:00.981-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    alter table if exists activity_log 
+       add constraint FK634sb3dvk7nyxjcjcem7m282a 
+       foreign key (user_id) 
+       references users
+2026-03-16T23:21:00.981-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    alter table if exists application_contacts 
+       add constraint FKpb8580nk9yyx2uvi299d74m43 
+       foreign key (application_id) 
+       references applications
+2026-03-16T23:21:00.982-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    alter table if exists application_documents 
+       add constraint FKmn7jx61bon49nk5y29jp5hu5n 
+       foreign key (application_id) 
+       references applications
+2026-03-16T23:21:00.982-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    alter table if exists application_notes 
+       add constraint FKg6glly5kus12knbimgvuox697 
+       foreign key (application_id) 
+       references applications
+2026-03-16T23:21:00.983-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    alter table if exists application_stage_history 
+       add constraint FKdtdew6xmfpo4vaoruvdpy0sdj 
+       foreign key (application_id) 
+       references applications
+2026-03-16T23:21:00.983-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    alter table if exists application_stage_history 
+       add constraint FK34pmoqkbk2nj3tm9g0rh9hc5s 
+       foreign key (from_stage_id) 
+       references application_stages
+2026-03-16T23:21:00.984-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    alter table if exists application_stage_history 
+       add constraint FKoq71e7q91vx2b32djuytsmdje 
+       foreign key (to_stage_id) 
+       references application_stages
+2026-03-16T23:21:00.984-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    alter table if exists application_stages 
+       add constraint FKto5hb9ddt0vyde3nbl9nmbv3i 
+       foreign key (user_id) 
+       references users
+2026-03-16T23:21:00.985-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    alter table if exists applications 
+       add constraint FKf5g5yhopogvku6jmnnom09grg 
+       foreign key (stage_id) 
+       references application_stages
+2026-03-16T23:21:00.985-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    alter table if exists applications 
+       add constraint FKfsfqljedcla632u568jl5qf3w 
+       foreign key (user_id) 
+       references users
+2026-03-16T23:21:00.986-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    alter table if exists interview_rounds 
+       add constraint FK58oseq940ykqqou8qmfbvwoqr 
+       foreign key (application_id) 
+       references applications
+2026-03-16T23:21:00.986-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    alter table if exists offers 
+       add constraint FKhj817lidvjyh8tdemki8j4ps1 
+       foreign key (application_id) 
+       references applications
+2026-03-16T23:21:00.987-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    alter table if exists reminders 
+       add constraint FKrxdxbtk750agjckrma6tqlucn 
+       foreign key (application_id) 
+       references applications
+2026-03-16T23:21:00.987-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    alter table if exists reminders 
+       add constraint FKgibc0ij0e4s7bkldn4xybaanb 
+       foreign key (user_id) 
+       references users
+2026-03-16T23:21:00.989-04:00  INFO 68838 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-16T23:21:01.075-04:00  WARN 68838 --- [           main] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.example.jobtracker.repository.ActivityLogRepository
+2026-03-16T23:21:01.117-04:00  WARN 68838 --- [           main] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.example.jobtracker.repository.UserRepository
+2026-03-16T23:21:01.129-04:00  WARN 68838 --- [           main] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.example.jobtracker.repository.StageRepository
+2026-03-16T23:21:01.138-04:00  INFO 68838 --- [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-16T23:21:01.275-04:00  WARN 68838 --- [           main] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.example.jobtracker.repository.ApplicationRepository
+2026-03-16T23:21:01.302-04:00  WARN 68838 --- [           main] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.example.jobtracker.repository.StageHistoryRepository
+2026-03-16T23:21:01.318-04:00  WARN 68838 --- [           main] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.example.jobtracker.repository.DocumentRepository
+2026-03-16T23:21:01.326-04:00  WARN 68838 --- [           main] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.example.jobtracker.repository.NoteRepository
+2026-03-16T23:21:01.334-04:00  WARN 68838 --- [           main] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.example.jobtracker.repository.ContactRepository
+2026-03-16T23:21:01.343-04:00  WARN 68838 --- [           main] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.example.jobtracker.repository.OfferRepository
+2026-03-16T23:21:01.353-04:00  WARN 68838 --- [           main] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.example.jobtracker.repository.PasswordResetTokenRepository
+2026-03-16T23:21:01.361-04:00  WARN 68838 --- [           main] c.e.j.security.JwtTokenProvider          : JWT secret is not securely configured. Generating an ephemeral secret for this runtime.
+2026-03-16T23:21:01.393-04:00  WARN 68838 --- [           main] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.example.jobtracker.repository.InterviewRepository
+2026-03-16T23:21:01.400-04:00  WARN 68838 --- [           main] ocalVariableTableParameterNameDiscoverer : Using deprecated '-debug' fallback for parameter name resolution. Compile the affected code with '-parameters' instead or avoid its introspection: com.example.jobtracker.repository.ReminderRepository
+2026-03-16T23:21:01.464-04:00  WARN 68838 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-16T23:21:01.514-04:00 DEBUG 68838 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : 52 mappings in 'requestMappingHandlerMapping'
+2026-03-16T23:21:01.556-04:00 DEBUG 68838 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**, /swagger-ui*/*swagger-initializer.js, /swagger-ui*/**] in 'resourceHandlerMapping'
+2026-03-16T23:21:01.577-04:00  INFO 68838 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7072606, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7266f136, org.springframework.security.web.context.SecurityContextHolderFilter@116c43d4, org.springframework.security.web.header.HeaderWriterFilter@5f2312f3, org.springframework.web.filter.CorsFilter@2daf2351, org.springframework.security.web.authentication.logout.LogoutFilter@7e5c04a4, com.example.jobtracker.security.JwtAuthenticationFilter@2d170dac, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6f1ba660, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@292d1705, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@139e291e, org.springframework.security.web.session.SessionManagementFilter@3dd4f91d, org.springframework.security.web.access.ExceptionTranslationFilter@205c5cd0, org.springframework.security.web.access.intercept.AuthorizationFilter@134ccb03]
+2026-03-16T23:21:01.636-04:00 DEBUG 68838 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2026-03-16T23:21:01.649-04:00 DEBUG 68838 --- [           main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 2 @ExceptionHandler, 1 ResponseBodyAdvice
+2026-03-16T23:21:01.706-04:00 DEBUG 68838 --- [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
 
 
 ============================
@@ -201,21 +466,6 @@ Positive matches:
 
    ErrorMvcAutoConfiguration.WhitelabelErrorViewConfiguration#defaultErrorView matched:
       - @ConditionalOnMissingBean (names: error; SearchStrategy: all) did not find any beans (OnBeanCondition)
-
-   FlywayAutoConfiguration matched:
-      - @ConditionalOnClass found required class 'org.flywaydb.core.Flyway' (OnClassCondition)
-      - @ConditionalOnProperty (spring.flyway.enabled) matched (OnPropertyCondition)
-      - AnyNestedCondition 2 matched 1 did not; NestedCondition on FlywayAutoConfiguration.FlywayDataSourceCondition.FlywayUrlCondition @ConditionalOnProperty (spring.flyway.url) did not find property 'url'; NestedCondition on FlywayAutoConfiguration.FlywayDataSourceCondition.JdbcConnectionDetailsCondition @ConditionalOnBean (types: org.springframework.boot.autoconfigure.jdbc.JdbcConnectionDetails; SearchStrategy: all) found bean 'jdbcConnectionDetails'; NestedCondition on FlywayAutoConfiguration.FlywayDataSourceCondition.DataSourceBeanCondition @ConditionalOnBean (types: javax.sql.DataSource; SearchStrategy: all) found bean 'dataSource' (FlywayAutoConfiguration.FlywayDataSourceCondition)
-
-   FlywayAutoConfiguration.FlywayConfiguration matched:
-      - @ConditionalOnClass found required class 'org.springframework.jdbc.support.JdbcUtils' (OnClassCondition)
-      - @ConditionalOnMissingBean (types: org.flywaydb.core.Flyway; SearchStrategy: all) did not find any beans (OnBeanCondition)
-
-   FlywayAutoConfiguration.FlywayConfiguration#flywayConnectionDetails matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.flyway.FlywayConnectionDetails; SearchStrategy: all) did not find any beans (OnBeanCondition)
-
-   FlywayAutoConfiguration.FlywayConfiguration#flywayInitializer matched:
-      - @ConditionalOnMissingBean (types: org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer; SearchStrategy: all) did not find any beans (OnBeanCondition)
 
    GenericCacheConfiguration matched:
       - Cache org.springframework.boot.autoconfigure.cache.GenericCacheConfiguration automatic cache type (CacheCondition)
@@ -812,6 +1062,12 @@ Negative matches:
       Did not match:
          - @ConditionalOnClass did not find required class 'org.springframework.web.reactive.config.WebFluxConfigurer' (OnClassCondition)
 
+   FlywayAutoConfiguration:
+      Did not match:
+         - @ConditionalOnProperty (spring.flyway.enabled) found different value in property 'enabled' (OnPropertyCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.flywaydb.core.Flyway' (OnClassCondition)
+
    FreeMarkerAutoConfiguration:
       Did not match:
          - @ConditionalOnClass did not find required class 'freemarker.template.Configuration' (OnClassCondition)
@@ -870,7 +1126,10 @@ Negative matches:
 
    H2ConsoleAutoConfiguration:
       Did not match:
-         - @ConditionalOnClass did not find required class 'org.h2.server.web.JakartaWebServlet' (OnClassCondition)
+         - @ConditionalOnProperty (spring.h2.console.enabled=true) did not find property 'enabled' (OnPropertyCondition)
+      Matched:
+         - @ConditionalOnClass found required class 'org.h2.server.web.JakartaWebServlet' (OnClassCondition)
+         - found 'session' scope (OnWebApplicationCondition)
 
    HazelcastAutoConfiguration:
       Did not match:
@@ -1432,10 +1691,10 @@ Unconditional classes:
 
 
 
-2026-03-16T21:22:35.259-04:00  INFO 98909 --- [           main] c.e.j.ApplicationIntegrationTest         : Started ApplicationIntegrationTest in 1.778 seconds (process running for 2.185)
-2026-03-16T21:22:35.260-04:00 DEBUG 98909 --- [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
-2026-03-16T21:22:35.261-04:00 DEBUG 98909 --- [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
-2026-03-16T21:22:35.551-04:00 DEBUG 98909 --- [           main] org.hibernate.SQL                        : 
+2026-03-16T23:21:01.710-04:00  INFO 68838 --- [           main] c.e.j.ApplicationIntegrationTest         : Started ApplicationIntegrationTest in 1.937 seconds (process running for 2.266)
+2026-03-16T23:21:01.711-04:00 DEBUG 68838 --- [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state LivenessState changed to CORRECT
+2026-03-16T23:21:01.711-04:00 DEBUG 68838 --- [           main] o.s.b.a.ApplicationAvailabilityBean      : Application availability state ReadinessState changed to ACCEPTING_TRAFFIC
+2026-03-16T23:21:01.991-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
     select
         u1_0.id,
         u1_0.created_at,
@@ -1447,14 +1706,99 @@ Unconditional classes:
         users u1_0 
     where
         u1_0.username=?
-2026-03-16T21:22:35.810-04:00 DEBUG 98909 --- [           main] org.hibernate.SQL                        : 
+2026-03-16T23:21:02.247-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
     insert 
     into
         users
-        (created_at,display_name,password_hash,role,username) 
+        (created_at,display_name,password_hash,role,username,id) 
     values
-        (?,?,?,?,?)
-2026-03-16T21:22:35.818-04:00 DEBUG 98909 --- [           main] org.hibernate.SQL                        : 
+        (?,?,?,?,?,default)
+2026-03-16T23:21:02.254-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    select
+        a1_0.id 
+    from
+        application_stages a1_0 
+    where
+        a1_0.user_id=? 
+        and upper(a1_0.name)=upper(?) 
+    fetch
+        first ? rows only
+2026-03-16T23:21:02.256-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        application_stages
+        (is_archived,color_hex,created_at,display_order,name,is_terminal_rejection,is_terminal_success,updated_at,user_id,id) 
+    values
+        (?,?,?,?,?,?,?,?,?,default)
+2026-03-16T23:21:02.257-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    select
+        a1_0.id 
+    from
+        application_stages a1_0 
+    where
+        a1_0.user_id=? 
+        and upper(a1_0.name)=upper(?) 
+    fetch
+        first ? rows only
+2026-03-16T23:21:02.257-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        application_stages
+        (is_archived,color_hex,created_at,display_order,name,is_terminal_rejection,is_terminal_success,updated_at,user_id,id) 
+    values
+        (?,?,?,?,?,?,?,?,?,default)
+2026-03-16T23:21:02.258-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    select
+        a1_0.id 
+    from
+        application_stages a1_0 
+    where
+        a1_0.user_id=? 
+        and upper(a1_0.name)=upper(?) 
+    fetch
+        first ? rows only
+2026-03-16T23:21:02.258-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        application_stages
+        (is_archived,color_hex,created_at,display_order,name,is_terminal_rejection,is_terminal_success,updated_at,user_id,id) 
+    values
+        (?,?,?,?,?,?,?,?,?,default)
+2026-03-16T23:21:02.258-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    select
+        a1_0.id 
+    from
+        application_stages a1_0 
+    where
+        a1_0.user_id=? 
+        and upper(a1_0.name)=upper(?) 
+    fetch
+        first ? rows only
+2026-03-16T23:21:02.259-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        application_stages
+        (is_archived,color_hex,created_at,display_order,name,is_terminal_rejection,is_terminal_success,updated_at,user_id,id) 
+    values
+        (?,?,?,?,?,?,?,?,?,default)
+2026-03-16T23:21:02.259-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    select
+        a1_0.id 
+    from
+        application_stages a1_0 
+    where
+        a1_0.user_id=? 
+        and upper(a1_0.name)=upper(?) 
+    fetch
+        first ? rows only
+2026-03-16T23:21:02.260-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        application_stages
+        (is_archived,color_hex,created_at,display_order,name,is_terminal_rejection,is_terminal_success,updated_at,user_id,id) 
+    values
+        (?,?,?,?,?,?,?,?,?,default)
+2026-03-16T23:21:02.261-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
     select
         u1_0.id,
         u1_0.created_at,
@@ -1466,21 +1810,49 @@ Unconditional classes:
         users u1_0 
     where
         u1_0.username=?
-2026-03-16T21:22:35.822-04:00 DEBUG 98909 --- [           main] org.hibernate.SQL                        : 
+2026-03-16T23:21:02.264-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    select
+        a1_0.id,
+        a1_0.is_archived,
+        a1_0.color_hex,
+        a1_0.created_at,
+        a1_0.display_order,
+        a1_0.name,
+        a1_0.is_terminal_rejection,
+        a1_0.is_terminal_success,
+        a1_0.updated_at,
+        a1_0.user_id 
+    from
+        application_stages a1_0 
+    where
+        a1_0.user_id=? 
+        and not(a1_0.is_archived) 
+    order by
+        a1_0.display_order 
+    fetch
+        first ? rows only
+2026-03-16T23:21:02.265-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
     insert 
     into
         applications
-        (applied_at,company,notes,role,source_url,status,updated_at,user_id) 
+        (application_deadline,application_source,applied_at,company,deleted_at,employment_type,job_description,location,notes,posting_url,priority,role,salary_range,source_url,sponsorship_available,stage_id,stage_entered_at,updated_at,user_id,work_mode,id) 
     values
-        (?,?,?,?,?,?,?,?)
-2026-03-16T21:22:35.825-04:00 DEBUG 98909 --- [           main] org.hibernate.SQL                        : 
+        (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,default)
+2026-03-16T23:21:02.266-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        application_stage_history
+        (application_id,changed_at,from_stage_id,reason,to_stage_id,id) 
+    values
+        (?,?,?,?,?,default)
+2026-03-16T23:21:02.267-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
     insert 
     into
         activity_log
-        (action,application_id,created_at,details,user_id) 
+        (action,application_id,created_at,details,user_id,id) 
     values
-        (?,?,?,?,?)
-2026-03-16T21:22:35.829-04:00 DEBUG 98909 --- [           main] org.hibernate.SQL                        : 
+        (?,?,?,?,?,default)
+2026-03-16T23:21:02.269-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
     select
         u1_0.id,
         u1_0.created_at,
@@ -1492,22 +1864,51 @@ Unconditional classes:
         users u1_0 
     where
         u1_0.username=?
-2026-03-16T21:22:35.831-04:00 DEBUG 98909 --- [           main] org.hibernate.SQL                        : 
+2026-03-16T23:21:02.271-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
     select
         a1_0.id,
+        a1_0.application_deadline,
+        a1_0.application_source,
         a1_0.applied_at,
         a1_0.company,
+        a1_0.deleted_at,
+        a1_0.employment_type,
+        a1_0.job_description,
+        a1_0.location,
         a1_0.notes,
+        a1_0.posting_url,
+        a1_0.priority,
         a1_0.role,
+        a1_0.salary_range,
         a1_0.source_url,
-        a1_0.status,
+        a1_0.sponsorship_available,
+        a1_0.stage_id,
+        a1_0.stage_entered_at,
         a1_0.updated_at,
-        a1_0.user_id 
+        a1_0.user_id,
+        a1_0.work_mode 
     from
         applications a1_0 
     where
-        a1_0.user_id=?
-2026-03-16T21:22:35.834-04:00 DEBUG 98909 --- [           main] org.hibernate.SQL                        : 
+        a1_0.user_id=? 
+        and a1_0.deleted_at is null
+2026-03-16T23:21:02.275-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    select
+        a1_0.id,
+        a1_0.is_archived,
+        a1_0.color_hex,
+        a1_0.created_at,
+        a1_0.display_order,
+        a1_0.name,
+        a1_0.is_terminal_rejection,
+        a1_0.is_terminal_success,
+        a1_0.updated_at,
+        a1_0.user_id 
+    from
+        application_stages a1_0 
+    where
+        a1_0.id=?
+2026-03-16T23:21:02.277-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
     select
         u1_0.id,
         u1_0.created_at,
@@ -1519,21 +1920,70 @@ Unconditional classes:
         users u1_0 
     where
         u1_0.username=?
-2026-03-16T21:22:35.835-04:00 DEBUG 98909 --- [           main] org.hibernate.SQL                        : 
+2026-03-16T23:21:02.278-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
     select
         a1_0.id,
-        a1_0.applied_at,
-        a1_0.company,
-        a1_0.notes,
-        a1_0.role,
-        a1_0.source_url,
-        a1_0.status,
+        a1_0.is_archived,
+        a1_0.color_hex,
+        a1_0.created_at,
+        a1_0.display_order,
+        a1_0.name,
+        a1_0.is_terminal_rejection,
+        a1_0.is_terminal_success,
         a1_0.updated_at,
         a1_0.user_id 
     from
+        application_stages a1_0 
+    where
+        a1_0.user_id=? 
+        and not(a1_0.is_archived) 
+    order by
+        a1_0.display_order
+2026-03-16T23:21:02.279-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    select
+        count(a1_0.id) 
+    from
         applications a1_0 
     where
-        a1_0.user_id=?
+        a1_0.user_id=? 
+        and a1_0.deleted_at is null 
+        and a1_0.stage_id=?
+2026-03-16T23:21:02.281-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    select
+        count(a1_0.id) 
+    from
+        applications a1_0 
+    where
+        a1_0.user_id=? 
+        and a1_0.deleted_at is null 
+        and a1_0.stage_id=?
+2026-03-16T23:21:02.281-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    select
+        count(a1_0.id) 
+    from
+        applications a1_0 
+    where
+        a1_0.user_id=? 
+        and a1_0.deleted_at is null 
+        and a1_0.stage_id=?
+2026-03-16T23:21:02.282-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    select
+        count(a1_0.id) 
+    from
+        applications a1_0 
+    where
+        a1_0.user_id=? 
+        and a1_0.deleted_at is null 
+        and a1_0.stage_id=?
+2026-03-16T23:21:02.283-04:00 DEBUG 68838 --- [           main] org.hibernate.SQL                        : 
+    select
+        count(a1_0.id) 
+    from
+        applications a1_0 
+    where
+        a1_0.user_id=? 
+        and a1_0.deleted_at is null 
+        and a1_0.stage_id=?
 ]]></system-out>
     <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (/Users/atharvawaranashiwar/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.16/byte-buddy-agent-1.14.16.jar)
 WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
