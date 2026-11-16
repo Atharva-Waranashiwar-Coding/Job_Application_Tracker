@@ -1,25 +1,43 @@
 # Job Application Tracker
 
-A full-stack job application tracking system built with:
-- **Backend:** Java Spring Boot (REST API)
-- **Frontend:** AngularJS (1.x) SPA
-- **Database:** PostgreSQL (with Flyway migrations)
-- **DevOps:** Docker + docker-compose, CI/CD pipeline to AWS (ECR + ECS Fargate)
+Track a job search in one workspace, with application forms, status tracking, and a Kanban view backed by a Java REST API.
 
-> This repository is built from scratch as a learning project.
+**Stack:** Java 17, Spring Boot, AngularJS 1.x, PostgreSQL, Flyway, Docker Compose. The repository also includes an AWS ECR/ECS CI/CD workflow.
 
-## Getting Started
+## Run the local demo
 
-1. Read the detailed developer guide in `README_DEV.md`.
-2. Use `docker-compose up --build` for a local environment.
+Install Docker and Docker Compose, clone this repository, then run:
 
-## Architecture Overview
+```bash
+docker compose up --build
+```
 
-- `backend/` - Spring Boot application
-- `frontend/` - AngularJS single-page application
-- `docker-compose.yml` - local dev stack (Postgres + backend + frontend)
-- `.github/workflows/ci.yml` - CI/CD pipeline with tests, build, and deploy
+- [Application UI](http://localhost:4200)
+- [Swagger API documentation](http://localhost:8080/swagger-ui/index.html)
 
-## Where to change things
+Use the seeded local account `admin` / `admin123`, or sign up. Create an application, edit its status, and inspect the Kanban view. These credentials are for local demonstration only. No hosted demo is currently linked.
 
-For common edits (new field, endpoint, UI page, status list), see the **Where to change things** section in `README_DEV.md`.
+## Architecture notes
+
+- The AngularJS SPA calls the Spring Boot backend; PostgreSQL persists application data.
+- Flyway applies versioned schema migrations when the backend starts.
+- Docker Compose separates the database, API, and web server. Backend tests use an H2 database.
+
+The demo password-reset flow returns its token directly instead of sending email, so it needs hardening before public deployment.
+
+## Development and verification
+
+```bash
+cd backend
+mvn test
+```
+
+In another terminal:
+
+```bash
+cd frontend
+npm install
+npm test
+```
+
+See [the development guide](README_DEV.md) for native setup, migration conventions, and troubleshooting.
